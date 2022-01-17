@@ -33,12 +33,12 @@
 <p><hr><h2>Contents</h2>
 <table border=1 style='border-collapse:collapse'>
 <tr>
-  <td width=100>&nbsp;
-  <td width=120><b>Scalability & Efficiency</b><br><small>[2001-]</small>
-  <td width=120><b>Dependability</b><br><small>[2007-]</small>
-  <td width=120><b>Quality & Productivity</b><br><small>[2012-]</small>
-  <td width=120><b>Security & Privacy</b><br><small>[2016-]</small>
-  <td width=120><b>Usability</b><br><small>[2019-]</small>
+  <td width=75>&nbsp;
+  <td width=125><b>Scalability & Efficiency</b><br><small>[2001-]</small>
+  <td width=125><b>Dependability</b><br><small>[2007-]</small>
+  <td width=125><b>Quality & Productivity</b><br><small>[2012-]</small>
+  <td width=125><b>Security & Privacy</b><br><small>[2016-]</small>
+  <td width=125><b>Usability</b><br><small>[2019-]</small>
 </tr>
 <tr>
   <td><b>Machine Learning<br>(ML)</b>
@@ -51,7 +51,7 @@
 <tr>
   <td><b>Apps</b>
   <td>Low-power WSNs <small><a href="#LNCS2004a">LNCS'04a</a> <a href="#LNCS2004b">LNCS'04b</a></small>
-  <td>MapReduce testing
+  <td>MapReduce testing <small><a href="#mapreduce">Patent</a></small>
   <td rowspan=2>Release & deployment  <small><a href="#ISSRE2014">ISSRE'14</a></small>
   <td>&nbsp;
 </tr>
@@ -78,7 +78,7 @@
   <td>Code optimization <small><a href="#RTCSA2006">RTCSA'06</a></small>
     <br>Flash storage <small><a href="#JSTS2005">JSTS'05</a> <a href="#TCE2004">TCE'04</a></small>
     <br>Compressed memory <small><a href="#LNCS2004compression">LNCS'04c</a> <a href="#PDPTA2003">PDPTA'03</a></small>
-    <br>Reconfigurable processor
+    <br>Reconfigurable processor <small>Patent<a href="#rp1">1</a>&<a href="#rp2">2</a></small>
   <td>GPGPU <small><a href="#IPDPS2011">IPDPS'11</a></small>
     <br>Watchdog <small><a href="#IPDPS2013">IPDPS'13</a></small>
     <br>Co-processor <small><a href="#Aerospace2012">Aerospace'12</a></small>
@@ -167,7 +167,7 @@ and certify the extended vendor implementation.
 <hr>
  In N-body programs, trajectories of simulated particles have chaotic patterns if errors are in the initial conditions or occur during some computation steps. It was believed that the global properties (e.g., total energy) of simulated particles are unlikely to be affected by a small number of such errors. In this paper, we present a quantitative analysis of the impact of transient faults in GPU devices on a global property of simulated particles. We experimentally show that a single-bit error in non-control data can change the final total energy of a large-scale N-body program with ~2.1% probability. We also find that the corrupted total energy values have certain biases (e.g., the values are not a normal distribution), which can be used to reduce the expected number of re-executions. In this paper, we also present a data error detection technique for N-body programs by utilizing two types of properties that hold in simulated physical models. The presented technique and an existing redundancy-based technique together cover many data errors (e.g., >97.5%) with a small performance overhead (e.g., 2.3%).
  
- <br><p><li>K. S. Yim, <br><b>"Methods and apparatuses for automated testing of streaming applications using MapReduce-like middleware,”</b><br><i> United States Patent</i>, No. 9,298,590, March 29, 2016 (Filed on June 26, 2014). *Typo in last name amended.
+ <br><a name="mapreduce"><p><li>K. S. Yim, <br><b>"Methods and apparatuses for automated testing of streaming applications using MapReduce-like middleware,”</b><br><i> United States Patent</i>, No. 9,298,590, March 29, 2016 (Filed on June 26, 2014). *Typo in last name amended.
 <!-[2013]-->
 <br><p><li>K. S. Yim, <br><b>From Experiment To Design – Fault Characterization and Detection in Parallel Computer Systems Using Computational Accelerators</b>,<br><i>Ph.D. Dissertation</i>, <i>University of Illinois at Urbana-Champaign</i>, May 2013.
  <br><a href=https://www.ideals.illinois.edu/handle/2142/44390>e-Library</a>
@@ -223,7 +223,7 @@ and certify the extended vendor implementation.
 <br><p><li>S.-w. Lee, H.-c. Kim, Y.-s. Shin, M.-k. Jeong, K. S. Yim, J.-j. Yoo, J.-d. Lee, <br><b>"Method and apparatus for preventing stack overflow in embedded system,”</b><br><i> United States Patent</i>, No. 9,280,500, March 8, 2016 (Filed on January 3, 2008).
 
   <!-[2007]-->
-<br><p><li>K. S. Yim, J.-j. Yoo, J.-w. Kim, S.-j. Ryu, J.-K. Park, J.-d. Lee, Y.-s. Shin, <br><b>"Multitasking method and apparatus for reconfigurable array,”</b><br><i> United States Patent</i>, No. 8,645,955, February 4, 2014 (Filed on June 12, 2007).
+<br><a name="rp1"><p><li>K. S. Yim, J.-j. Yoo, J.-w. Kim, S.-j. Ryu, J.-K. Park, J.-d. Lee, Y.-s. Shin, <br><b>"Multitasking method and apparatus for reconfigurable array,”</b><br><i> United States Patent</i>, No. 8,645,955, February 4, 2014 (Filed on June 12, 2007).
 <br><a name="kerneldebugger"><p><li>K. S. Yim, J.-k. Park, J.-j. Yoo, J.-d. Lee, C.-s. Im, Y.-S. Shin, <br><b>"Kernel-Aware Debugging System, Medium, and Method,"</b><br><i> United States Patent</i>, No. 8,239,838, August 7, 2012 (Filed on May 7, 2007); EU Patents, No. EP1870810A2, No. EP1870810A3.
 <br><p><li>K. S. Yim, J. J. Yoo, J. K. Park, C. S. Im, J. D. Lee, W. G. Kim, S. H. Choi, <br><b>"Method, System, and Medium for Providing Interprocessor Data Communication,”</b><br><i> United States Patent</i>, No. 8,127,110, February 28, 2012 (Filed on January 17, 2007).
 <br><p><li>K. S. Yim, J.-j. Yoo, Y.-s. Shin, S.-w. Lee, H.-c. Kim, J.-d. Lee, M.-k. Jeong, <br><b>"Method of managing memory in multiprocessor system on chip,”</b><br><i> United States Patent</i>, No. 7,805,582, Septemer 28, 2010 (Filed on September 13, 2007).
@@ -248,7 +248,7 @@ and certify the extended vendor implementation.
  <hr>
  Procedural abstraction reduces code size by replacing repeated code fragments with call instructions to a sub-routine that executes the repeated fragment. However, in order to build a subroutine, extra instructions are necessary to support the procedural call mechanism. In this paper, we present an operating system level technique which improves the space efficiency of a procedural abstraction-based code compaction technique. The call-related extra instructions are not used in the proposed technique because operating system routines implicitly supports the procedure call and return. The proposed technique consists of three execution modes including one applicable to ROM-based systems. The experimental results show the proposed technique reduces the code size significantly while increasing the execution time slightly.
 
-<br><p><li>K. S. Yim, J. W. Kim, S. J. Ryu, J. K. Park, J. J. Yoo, D.-H. Yoo, C. S. Im, J. D. Lee, H. S. Kim, <br><b>"Method, medium, and Apparatus with Interrupt Handling in a Reconfigurable Array,"</b><br><i> United States Patent</i>, No. 7,836,291, November 16, 2010 (Filed on October 17, 2006).
+<br><a name="rp2"><p><li>K. S. Yim, J. W. Kim, S. J. Ryu, J. K. Park, J. J. Yoo, D.-H. Yoo, C. S. Im, J. D. Lee, H. S. Kim, <br><b>"Method, medium, and Apparatus with Interrupt Handling in a Reconfigurable Array,"</b><br><i> United States Patent</i>, No. 7,836,291, November 16, 2010 (Filed on October 17, 2006).
 <br><p><li>K. S. Yim, J. D. Lee, J.-J. Yoo, K.-h. Kang, J.-k. Park, C.-s. Im, W.-g. Kim, C.-w. Baek, <br><b>"Method for reducing code size of a program in code memory by dynamically storing an instruction into a memory location following a group of instructions indicated by an offset operand and either a length operand or a bitmask operand of an echo instruction,”</b><br><i> United States Patent</i>, No. 7,831,809, November 9, 2010 (Filed on August 28, 2006).
 <br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 7,689,761, March 30, 2010 (Filed on July 13, 2006).
 <br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 8,812,771, August 19, 2014 (Filed on February 12, 2010).
