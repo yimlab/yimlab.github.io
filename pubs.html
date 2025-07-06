@@ -53,10 +53,10 @@
 <h1>Keun Soo YIM</h1>
 
 <hr><h3>Education</h3><ul>
-<li>Ph.D., <i>Computer Science (CS)</i>, UIUC (2013)
-<li>M.Sc., <i>Electrical Engr & CS</i>, Seoul Natl. U (2005)
-<li>B.Sc., <i>Electrical and Electronics Engr</i>, Yonsei (2003)
-<li>B.Sc., <i>CS & Industrial Systems Engr</i>, Yonsei (2003)
+<li>Ph.D., <i>Computer Science (CS)</i>, UIUC
+<li>M.Sc., <i>Electrical Engr & CS</i>, Seoul Natl. U
+<li>B.Sc., <i>Electrical and Electronics Engr</i>, Yonsei
+<li>B.Sc., <i>CS & Industrial Systems Engr</i>, Yonsei
 </ul>
 
 <h3>Employment</h3><ul>
@@ -81,14 +81,22 @@
   <td width=165px><b>Usability</b><br><small>[2019-]</small>
 </tr>
 <tr style="text-align:center">
+  <td><b>GAI</b><br><small>Generative AI</small>
+  <td>&nbsp;
+  <td>Forecasting <small><a href="#Forecasting">arXiv</a></small>
+  <td>&nbsp;
+  <td>&nbsp;
+  <td>&nbsp;
+</tr>
+<tr style="text-align:center">
   <td><b>IR</b><br><small>Information Retrieval</small>
   <td>Entity Pivoting <small><a href="#entitypivoting">Patent</a></small>
-    <br>App Indexing <small><a href="#AppIndexingCap">Report'24</a> <a href="#AppEntity">Report'23</a></small>
+    <br>App Indexing <small><a href="tr.html#AppIndexingCap">Report'24</a> <a href="tr.html#AppEntity">Report'23</a></small>
   <td>App Automation <small><a href="#appautomation">Patent</a></small>
-  <td>RAG <small><a href="#RAG">Report</a>
+  <td>RAG <small><a href="tr.html#RAG">Report</a>
   <td>&nbsp;
   <td>Benchmark <small><a href=#ToQB>arXiv</a></small>
-    <br>RL for HCI <small><a href="#RL">Report</a></small>
+    <br>RL for HCI <small><a href="tr.html#RL">Report</a></small>
 </tr>
 <tr style="text-align:center">
   <td><b>ML</b><br><small>Machine Learning</small>
@@ -141,6 +149,13 @@
 <!--Linux kernel, and open source ecosystem. Hardware-software co-design-->
 <p><hr><h2>My Papers and Patents</h2>
 <ol>
+<!--[2025]-->
+<a name="Forecasting"><p><li>K. S. Yim,<br><b>"Evaluation of a Foundational Model and Stochastic Models for Forecasting Sporadic or Spiky Production Outages of High-Performance Machine Learning Services,"</b><br>
+<i>arXiv:2507.01067</i>,
+2025.
+<br><a href=https://arxiv.org/abs/2507.01067>pre-print</a>
+<hr>
+Time series forecasting models have diverse real world applications (e.g., from electricity metrics to software workload). Latest foundational models trained for time series forecasting show strengths (e.g., for long sequences and in zero-shot settings). However, foundational model was not yet used for forecasting rare, spiky events, i.e., a challenging target because those are a corner case of extreme events. In this paper, we optimize a state-of-the-art foundational model to forecast sporadic or spiky production outages of high-performance machine learning services powering billions of client devices. We evaluate the forecasting errors of the foundational model compared with classical stochastic forecasting models (e.g., moving average and autoregressive). The analysis helps us understand how each of the evaluated models performs for the sporadic or spiky events. For example, it identifies the key patterns in the target data that are well tracked by the foundational model vs. each of the stochastic models. We use the models with optimal parameters to estimate a year-long outage statistics of a particular root cause with less than 6% value errors.
 <!--[2024]-->
 <a name="VP"><p><li>K. S. Yim,<br><b>"Predicting Likely-Vulnerable Code Changes: Machine Learning-based Vulnerability Protections for Android Open Source Project,"</b><br>
 <i>arXiv:2405.16655</i>,
