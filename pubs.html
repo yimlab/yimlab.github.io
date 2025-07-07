@@ -1,392 +1,367 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>The Writings of K. S. Yim</title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5W9WV6CMYG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5W9WV6CMYG');
-</script>
-<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>The Writings of K. S. Yim</title>
 
-.topnav {
-  overflow: hidden;
-  background-color: #fffff1;
-}
-
-.topnav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #046DAA;
-  color: white;
-}
-</style>
-</head>
-
-<body bgcolor=#fffff1 style='max-width:900px'>
-<a name="TopMenu"><div class="topnav">
-  <a href=index.html>Main</a>
-  <a href=pubs.html>Papers</a>
-  <a href=tr.html>Disclosures</a>
-  <a href=proc.html>Books</a>
-  <a href=bibs.html>BibTeX</a>
-  <a href=name.html>Name</a>
-  <a href=https://sites.google.com/site/keunsooyim/>Wiki</a>
-</div>
-
-<h1>Keun Soo YIM</h1>
-
-<hr><h3>Education</h3><ul>
-<li>Ph.D., <i>Computer Science (CS)</i>, UIUC
-<li>M.Sc., <i>Electrical Engr & CS</i>, Seoul Natl. U
-<li>B.Sc., <i>Electrical and Electronics Engr</i>, Yonsei
-<li>B.Sc., <i>CS & Industrial Systems Engr</i>, Yonsei
-</ul>
-
-<h3>Employment</h3><ul>
-<li>Google (2012-present)
-<li>IBM T. J. Watson (Summer 2011)
-<li>Samsung Advanced Institute of Technology (2005-2008)
-</ul>
-
-<h3>Honors</h3><ul>
-<li>Senior Member, IEEE (2022)
-<li>Samsung Human-tech Thesis Prize, Gold for CS&E (2011)
-</ul>
-
-<p><hr><h2>Contents</h2>
-<table border=1 style='border-collapse:collapse'>
-<tr style="text-align:center">
-  <td width=75px>&nbsp;
-  <td width=165px><b>Efficiency & Scalability</b><br><small>[1999-]</small>
-  <td width=165px><b>Dependability & Measurement</b><br><small>[2007-]</small>
-  <td width=165px><b>Quality & Productivity</b><br><small>[2011-]</small>
-  <td width=165px><b>Security & Privacy</b><br><small>[2015-]</small>
-  <td width=165px><b>Usability</b><br><small>[2019-]</small>
-</tr>
-<tr style="text-align:center">
-  <td><b>GAI</b><br><small>Generative AI</small>
-  <td>&nbsp;
-  <td>Forecasting <small><a href="#Forecasting">arXiv</a></small>
-  <td>&nbsp;
-  <td>&nbsp;
-  <td>&nbsp;
-</tr>
-<tr style="text-align:center">
-  <td><b>IR</b><br><small>Information Retrieval</small>
-  <td>Entity Pivoting <small><a href="#entitypivoting">Patent</a></small>
-    <br>App Indexing <small><a href="tr.html#AppIndexingCap">Report'24</a> <a href="tr.html#AppEntity">Report'23</a></small>
-  <td>App Automation <small><a href="#appautomation">Patent</a></small>
-  <td>RAG <small><a href="tr.html#RAG">Report</a>
-  <td>&nbsp;
-  <td>Benchmark <small><a href=#ToQB>arXiv</a></small>
-    <br>RL for HCI <small><a href="tr.html#RL">Report</a></small>
-</tr>
-<tr style="text-align:center">
-  <td><b>ML</b><br><small>Machine Learning</small>
-  <td>&nbsp;
-  <td>GPGPU <small><a href="#IPDPS2011">IPDPS'11</a></small>
-    <br>Watchdog <small><a href="#IPDPS2013">IPDPS'13</a></small>
-    <br>Unsupervised learning <small><a href="#IPDPS2014">IPDPS'14</a></small>
-  <td>Bigdata monitoring <small><a href="#ISSRE2016">ISSRE'16</a></small>
-  <td>Review bot <small><a href="#VP">pre-print</a></small>
-    <br>Virtual assistant <small><a href="#assistantprivacy">Patent</a></small>
-  <td>RecSys <small><a href="#autocompletefulfillment">Patent</a></small>
-</tr>
-<tr style="text-align:center">
-  <td><b>SE</b><br><small>Software Engineering</small>
-  <td>Debugger <small><a href="#kerneldebugger">Patent</a></small><!--Code coverage & profiling-->
-  <td>&nbsp;
-  <td>Release & deployment  <small><a href="#ISSRE2014">ISSRE'14</a></small>
-    <br>Testing infra <small><a href="#LNCS2011">LNCS'11</a></small>
-    <br>MapReduce testing <small><a href="#mapreduce">Patent</a></small>
-  <td>Security assessment <small><a href="#BC2023">Book chapter</a></small>
-    <br>System fuzzing <small><a href="#OnlineLecture2017">Videos</a></small>
-  <td>&nbsp;
-</tr>
-<tr style="text-align:center">
-  <td><b>OS</b><br><small>Operating Systems</small>
-  <td>Fast booting <small><a href="#SAC2005">SAC'05</a></small>
-    <br>Low-power WSNs <small><a href="#LNCS2004a">LNCS'04a</a> <a href="#LNCS2004b">LNCS'04b</a></small>
-    <br>Real-time OS <small><a href="#LNCS2006">LNCS'06</a></small>
-    <br>SynergyFS <small><a href="#OLS2008">OLS'08</a></small>
-    <br>OS jitter <small><a href="#jitter">Patent</a></small>
-  <td>Experimental validation <small><a href="#DSN2010">DSN'10</a> <a href="#DSN2009">PRDC'09</a></small>
-  <td>API compliance for ecosystem <small><a href="#SOSP2017tutorial">Tutorial'17</a></small>
-    <br>Android virtual device <small><a href="#AndroidVirtualDevice">Patent</a></small>
-  <td>Android updatability <small><a href="#TECS2019">TECS'19<a></small>
-    <br>System security <small><a href="#SRDS2016">SRDS'16</a></small>
-  <td>&nbsp;
-</tr>
-<tr style="text-align:center">
-  <td><b>ComSys</b><br><small>Computer Systems</small>
-  <td>Flash storage <small><a href="#JSTS2005">JSTS'05</a> <a href="#TCE2004">TCE'04</a></small>
-    <br>Code optimization <small><a href="#RTCSA2006">RTCSA'06</a></small>
-    <br>Compressed memory <small><a href="#LNCS2004compression">LNCS'04c</a> <a href="#PDPTA2003">PDPTA'03</a></small>
-    <br>Reconfigurable processor <small><a href="#rp1">Patent1</a> & <a href="#rp2">2</a></small>
-  <td>Co-processor <small><a href="#Aerospace2012">Aerospace'12</a></small>
-  <td>&nbsp;
-  <td>&nbsp;
-  <td>&nbsp;
-</tr>
-</table>
-<!--Linux kernel, and open source ecosystem. Hardware-software co-design-->
-<p><hr><h2>My Papers and Patents</h2>
-<ol>
-<!--[2025]-->
-<a name="Forecasting"><p><li>K. S. Yim,<br><b>"Evaluation of a Foundational Model and Stochastic Models for Forecasting Sporadic or Spiky Production Outages of High-Performance Machine Learning Services,"</b><br>
-<i>arXiv:2507.01067</i>,
-2025.
-<br><a href=https://arxiv.org/abs/2507.01067>pre-print</a>
-<hr>
-Time series forecasting models have diverse real world applications (e.g., from electricity metrics to software workload). Latest foundational models trained for time series forecasting show strengths (e.g., for long sequences and in zero-shot settings). However, foundational model was not yet used for forecasting rare, spiky events, i.e., a challenging target because those are a corner case of extreme events. In this paper, we optimize a state-of-the-art foundational model to forecast sporadic or spiky production outages of high-performance machine learning services powering billions of client devices. We evaluate the forecasting errors of the foundational model compared with classical stochastic forecasting models (e.g., moving average and autoregressive). The analysis helps us understand how each of the evaluated models performs for the sporadic or spiky events. For example, it identifies the key patterns in the target data that are well tracked by the foundational model vs. each of the stochastic models. We use the models with optimal parameters to estimate a year-long outage statistics of a particular root cause with less than 6% value errors.
-<!--[2024]-->
-<a name="VP"><p><li>K. S. Yim,<br><b>"Predicting Likely-Vulnerable Code Changes: Machine Learning-based Vulnerability Protections for Android Open Source Project,"</b><br>
-<i>arXiv:2405.16655</i>,
-2024.
-<br><a href=https://arxiv.org/abs/2405.16655>pre-print</a>
-<hr>
-This paper presents a framework that selectively triggers security reviews for incoming source code changes. Functioning as a review bot within a code review service, the framework can automatically request additional security reviews at pre-submit time before the code changes are submitted to a source code repository. Because performing such secure code reviews add cost, the framework employs a classifier trained to identify code changes with a high likelihood of vulnerabilities. The online classifier leverages various types of input features to analyze the review patterns, track the software engineering process, and mine specific text patterns within given code changes. The classifier and its features are meticulously chosen and optimized using data from the submitted code changes and reported vulnerabilities in Android Open Source Project (AOSP). The evaluation results demonstrate that our Vulnerability Prevention (VP) framework identifies approximately 80% of the vulnerability-inducing code changes in the dataset with a precision ratio of around 98% and a false positive rate of around 1.7%. We discuss the implications of deploying the VP framework in multi-project settings and future directions for Android security research. This paper explores and validates our approach to code change-granularity vulnerability prediction, offering a preventive technique for software security by preemptively detecting vulnerable code changes before submission.
-<br><a name="ToQB"><p><li>K. S. Yim,<br><b>"The Task-oriented Queries Benchmark (ToQB),"</b><br>
-<i>arXiv:2406.02943</i>,
-2024.
-<br><a href=https://arxiv.org/abs/2406.02943>Paper</a> <a href=https://github.com/google/task-oriented-queries>GitHub</a>
-<hr>
-Task-oriented queries (e.g., one-shot queries to play videos, order food, or call a taxi) are crucial for assessing the quality of virtual assistants, chatbots, and other large language model (LLM)-based services. However, a standard benchmark for task-oriented queries is not yet available, as existing benchmarks in the relevant NLP (Natural Language Processing) fields have primarily focused on task-oriented dialogues. Thus, we present a new methodology for efficiently generating the Task-oriented Queries Benchmark (ToQB) using existing task-oriented dialogue datasets and an LLM service. Our methodology involves formulating the underlying NLP task to summarize the original intent of a speaker in each dialogue, detailing the key steps to perform the devised NLP task using an LLM service, and outlining a framework for automating a major part of the benchmark generation process. Through a case study encompassing three domains (i.e., two single-task domains and one multi-task domain), we demonstrate how to customize the LLM prompts (e.g., omitting system utterances or speaker labels) for those three domains and characterize the generated task-oriented queries. The generated ToQB dataset is made available to the public. We further discuss new domains that can be added to ToQB by community contributors and its practical applications.
-<br><p><li>K. S. Yim<br><b>"Disparate sourcing of tree data structures for searching and suggesting application services,"</b><br><i>United States Patent</i>, No. 12,153,941, November 26, 2024 (filed on November 6, 2023).
-<br><p><li>K. S. Yim and Z. Chen<br><b>"Launching determination based on login status,"</b><br><i>United States Patent</i>, No. 11,971,801, April 30, 2024 (filed on December 15, 2022).
-<!--<br><p><li>K. S. Yim, I. Firman, A. M. Coimbra, R. J. Berry, M. Ionut-Andrecia, M. Reutov, G. O. Taubman, C. S. Kuang, M. Oh, S. R. Ganov, and K. R. Desineni,<br><b>"Human-in-the-Loop Voice Automation System,"</b><br><i>United States Patent</i>, Application No. 18/013,083, May 31, 2022, Publication No. 2023/0274737, August 31, 2023.-->
-
-<!--[2023]-->
-<br><a name="BC2023"><p><li>K. S. Yim,<br><b>"Assessment of Security Defense of Native Programs Against Software Faults,"</b><br>
-<i>System Dependability and Analytics</i>, Wang, L., Pattabiraman, K., Di Martino, C., Athreya, A., Bagchi, S. (eds), Springer Series in Reliability Engineering,
-Springer, Cham., 2023.
-<br><a href=https://doi.org/10.1007/978-3-031-02063-6_5>Springer Link</a> <a href=bibs.html#BC2023>.BIB</a>
-<hr>
-This chapter explores the possibility of building a unified assessment methodology for software reliability and security. The fault injection methodology originally designed for reliability assessment is extended to quantify and characterize the security defense aspect of native applications. Native application refers to system software written in C/C++ programming language. Specifically, software fault injection is used to measure the portion of injected software faults caught by the built-in error detection mechanisms of a target program (e.g., the detection coverage of assertions). To automatically activate as many injected faults as possible, a gray box fuzzing technique is used. Using dynamic analyzers during fuzzing further helps us catch the critical error propagation paths of injected (but undetected) faults, and identify code fragments as targets for security hardening. Because conducting software fault injection experiments for fuzzing is an expensive process, a novel, locality-based fault selection algorithm is presented. The presented algorithm increases the fuzzing failure ratios by 3–19 times, accelerating the speed of experiment. The case studies use all the above experimental techniques in order to compare the effectiveness of fuzzing and testing, and consequently assess the security defense of native benchmark programs.
-<br><a name="entitypivoting"><p><li>K. S. Yim, K. Y. Lim, and U. Patil<br><b>"Recommending Action(s) Based on Entity or Entity Type,"</b><br><i>United States Patent</i>, No. 11,790,173, October 17, 2023 (filed on October 28, 2020).
-<br><a name="appautomation"><p><li>K. S. Yim and I. Firman,<br><b>"Encoding/decoding user interface interactions,"</b><br><i>United States Patent</i>, No. 11,726,641, August 15, 2023 (filed on February 14, 2022).
-<br><a name="autocompletefulfillment"><p><li>K. S. Yim,<br><b>"Fulfillment of actionable requests ahead of a user selecting a particular autocomplete suggestion for completing a current user input,"</b><br><i>United States Patent</i>, No. 11,556,707, January 17, 2023 (filed on June 18, 2020).
-
-<!--[2022]-->
-<br><p><li>K. S. Yim, Z. Chen, and B. G. Lim,<br><b>"Selectively Rendering a Keyboard Interface in Response to an Assistant Invocation in Certain Circumstances,"</b><br><i>United States Patent</i>, No. 11,481,686, October 25, 2022 (filed on May 13, 2021).
-<br><a name="P2022"><p><li>K. S. Yim,<br><b>"Open source software testing,"</b><br><i>United States Patent</i>, No. 11,216,357, January 4, 2022 (filed on February 22, 2018).
-<br><p><li>K. S. Yim and I. Malchev,<br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i>United States Patent</i>, No. 11,354,464, June 7, 2022 (filed on June 26, 2020).
-<br><a name="assistantprivacy"><p><li>K. S. Yim,<br><b>"Automated assistant architecture for preserving privacy of application content,"</b><br><i>United States Patent</i>, No. 11,374,887, June 28, 2022 (filed on October 29, 2019).
-
-<!--[2021]-->
-<br><p><li>R. Shah, M. Ben-Ari, and K. S. Yim,<br><b>"Automated device test triaging system and techniques”,</b><br><i>United States Patent</i>, No. 11,113,183, September 7, 2021 (filed on November 10, 2017).
-
-<!--[2020]-->
-<br><a name="AndroidVirtualDevice"><p><li>K. S. Yim and I. Malchev, <br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i> United States Patent</i>, No. 10,740,511, August 11, 2020 (Filed on April 25, 2019).
-<br><p><li>I. B. Malchev and K. S. Yim, <br><b>"Operating system validation,”</b><br><i> United States Patent</i>, No. 10,754,765, August 25, 2020 (Filed on December 13, 2017).
-
-  <!-[2019]-->
-<br><a name="TECS2019"><p><li>K. S. Yim, I. Malchev, A. Hsieh, and D. Burke, <br><b>"Treble: Fast Software Updates by Creating an Equilibrium in an Active Software Ecosystem of Globally Distributed Stakeholders,”</b><br><i> ACM Transactions on Embedded Computing Systems (TECS)</i>, Vol. 18, Issue 5s, Article 104, 23 pages, October 2019. (SCIE, Impact Factor: 1.156)
-<br><a href=https://dl.acm.org/doi/10.1145/3358237>ACM DL</a> <a href=bibs.html#TECS2019>.BIB</a>
-<hr>
-This paper presents our experience with Treble, a two-year initiative to build the modular base in Android, a Java-based mobile platform running on the Linux kernel. Our Treble architecture splits the hardware independent core framework written in Java from the hardware dependent vendor implementations (e.g., user space device drivers, vendor native libraries, and kernel written in C/C++). Cross-layer communications between them are done via versioned, stable inter-process communication interfaces whose backward compatibility is tested by using two API compliance suites. Based on this architecture, we repackage the key Android software components that suffered from crucial post-launch security bugs as separate images. That not only enables separate ownerships but also independent updates of each image by interested ecosystem entities. We discuss our experience of delivering Treble architectural changes to silicon vendors and device makers using a yearly release model. Our experiments and industry rollouts support our hypothesis that giving more freedom to all ecosystem entities and creating an equilibrium are a transformation necessary to further scale the world largest open source ecosystem with over two billion active devices.
-
-<br><p><li>K. S. Yim and I. Malchev, <br><b>"Multi-layer test suite generation,”</b><br><i> United States Patent</i>, No. 10,482,002, November 19, 2019 (Filed on September 20, 2018).
-<br><p><li>K. S. Yim and I. Malchev, <br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i> United States Patent</i>, No. 10,303,720, May 28, 2019 (Filed on August 17, 2016).
-<br><a name="jitter"><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Filtering system noises in parallel computer system during thread synchronization,”</b><br><i> United States Patent</i>, No. 10,203,996, February 12, 2019 (Filed on December 16 2016).
-
-  <!-[2018]-->
-<br><p><li>K. S. Yim and I. Malchev, <br><b>"Middleware interface and middleware interface generator,"</b><br><i> United States Patent</i>, No. 10,019,298, July 10, 2018  (Filed on August 17, 2016).
-
-  <!-[2017]-->
-<br><a name="SOSP2017tutorial"><p><li>K. S. Yim, I. B. Malchev, and D. Burke, <br><b>“A Taste of Android Oreo (v8.0) Device Manufacturer,”</b><br><i> ACM Symposium on Operating Systems Principles (SOSP)</i>, Tutorial, 2017.
-<br><a href=https://storage.googleapis.com/pub-tools-public-publication-data/pdf/5f1c2023353bae58231f9095bca2a1b6fee0bb63.pdf>Extended Abstract</a> <a href=https://docs.google.com/presentation/d/1iI4rOmUPkPJfAhPJpSsp5Mi2mqNbxlYzetW41y1hpYg/preview?slide=id.g25222c6d93_0_0>Slide</a> <a href=https://wp.nyu.edu/sosp2017tutorials/>Website</a>
- <hr>In 2017, over two billion Android devices developed by more than a
-thousand device manufacturers (DMs) around the world are actively
-in use. Historically, silicon vendors (SVs), DMs, and telecom carriers
-extended the Android Open Source Project (AOSP) platform source
-code and used the customized code in final production devices. Forking, on the other hand, makes it hard to accept upstream patches
-(e.g., security fixes). In order to reduce such software update costs,
-starting from Android v8.0, the new Vendor Test Suite (VTS) splits
-hardware-independent framework and hardware-dependent vendor implementation by using versioned, stable APIs (namely, vendor
-interface). Android v8.0 thus opens the possibility of a fast upgrade
-of the Android framework as long as the underlying vendor implementation passes VTS. This tutorial teaches how to develop, test,
-and certify a compatible Android vendor interface implementation
-running below the framework. We use an Android Virtual Device
-(AVD) emulating an Android smartphone device to implement a
-user-space device driver which uses formalized interfaces and RPCs,
-develop VTS tests for that component, execute the extended tests,
-and certify the extended vendor implementation.
-
-    <br><a name="OnlineLecture2017"><p><li>K. S. Yim et al., <br><b>Android VTS and CTS-on-GSI video series, Android Open Source Project (AOSP)</b>, first released in 2017.
-<br> <a href=https://source.android.com/compatibility/vts/codelab-video>Videos</a>
-<br><p><li>K. S. Yim and P. Patnaik, <br><b>"Testing Application Software Using Virtual or Physical Devices,"</b><br><i> United States Patent</i>, No. 9,703,691, July 11, 2017 (Filed on June 15, 2015).
-<br><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Monitoring system noises in parallel computer systems,”</b><br><i> United States Patent</i>, No. 9,558,095, January 31, 2017 (Filed on March 30, 2016).
-
-  <!-[2016]-->
-<br><a name="SRDS2016"><p><li>K. S. Yim, <br><b>"The Rowhammer Attack Injection Methodology,”</b><br>in <i>Proceedings of the IEEE Symposium Reliable Distributed Systems (SRDS)</i>, pp. 1-10, September 2016. (Acceptance Ratio: 32.5% = 27/83)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5dnNNOEpNWXEtSkU/view?resourcekey=0-_0wY5YqwZQo2eo74rylpyA>Paper</a> <a href=https://drive.google.com/file/d/1nGrG0ddAh_2KT0L-tZBxP8VBjYt5lsdR/view>Slide</a>
-<hr>
- This paper presents a systematic methodology to identify and validate security attacks that exploit user influenceable hardware faults (i.e., rowhammer errors). We break down rowhammer attack procedures into nine generalized steps where some steps are designed to increase the attack success probabilities. Our framework can perform those nine operations (e.g., pressuring system memory and spraying landing pages) as well as inject rowhammer errors which are basically modeled as ≥3-bit errors. When one of the injected errors is activated, such can cause control or data flow divergences which can then be caught by a prepared landing page and thus lead to a successful attack. Our experiments conducted against a guest operating system of a typical cloud hypervisor identified multiple reproducible targets for privilege escalation, shell injection, memory and disk corruption, and advanced denial-of-service attacks. Because the presented rowhammer attack injection (RAI) methodology uses error injection and thus statistical sampling, RAI can quantitatively evaluate the modeled rowhammer attack success probabilities of any given target software states.
-
-<br><a name="ISSRE2016"><p><li>K. S. Yim, <br><b>"Evaluation Metrics of Reliability Monitoring Rules of a Big Data Service,”</b><br>in <i>Proceedings of the IEEE International Symposium on Software Reliability Engineering (ISSRE)</i>, pp. 376-387, October 2016. (Acceptance Ratio: 35% = 45/130)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5c2pKZlhqV25wdFE/view?resourcekey=0-SNewyuRpqAqdJESbmYyXxg>Paper</a> <a href=https://drive.google.com/file/d/1nGrG0ddAh_2KT0L-tZBxP8VBjYt5lsdR/view>Slide</a>
-<hr>
- This paper presents new metrics to evaluate the reliability monitoring rules of a large-scale big data service. Our target service uses manually-tuned, service-level reliability monitoring rules. Using the measurement data, we identify two key technical challenges in operating our target monitoring system. In order to improve the operational efficiency, we characterize how those rules were manually tuned by the domain experts. The characterization results provide useful information to operators supposed to regularly tune such rules. Using the actual production failure data, we evaluate the same monitoring rules by using standard metrics and the presented metrics. Our evaluation results show the strengths and weaknesses of each metric and show that the presented metrics can further help operators recognize when and which rules need to be re-tuned.
-<br><p><li>K. S. Yim, <br><b>"Fault tolerance model, methods, and apparatuses and their validation techniques,”</b><br><i> United States Patent</i>, No. 9,317,254, April 19, 2016 (Filed on December 4, 2013).
-<br><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Filtering system noises in parallel computer systems during thread synchronization,”</b><br><i> United States Patent</i>, No. 9,361,202, June 7, 2016 (Filed on July 18, 2013).
-<br><a name="mapreduce"><p><li>K. S. Yim, <br><b>"Methods and apparatuses for automated testing of streaming applications using MapReduce-like middleware,”</b><br><i> United States Patent</i>, No. 9,298,590, March 29, 2016 (Filed on June 26, 2014). *Typo in last name amended.
-<br><p><li>S.-w. Lee, H.-c. Kim, Y.-s. Shin, M.-k. Jeong, K. S. Yim, J.-j. Yoo, J.-d. Lee, <br><b>"Method and apparatus for preventing stack overflow in embedded system,”</b><br><i> United States Patent</i>, No. 9,280,500, March 8, 2016 (Filed on January 3, 2008).
-
-  <!-[2015]-->
-<br><p><li>J. D. Lee, S.-w. Lee, J.-j. Yoo, Y.-s. Shin, M.-k. Jeong, and K. S. Yim, <br><b>"Method, medium and apparatus scheduling tasks in a real time operating system,”</b><br><i> United States Patent</i>, No. 9,009,714, April 14, 2015 (Filed on December 19, 2007).
-
-  <!-[2014]-->
-<br><a name="IPDPS2014"><p><li>K. S. Yim, <br><b>"Norming to Performing: Failure Analysis and Deployment Automation of Big Data Software Developed by Highly Iterative Models,”</b><br>in <i>Proceedings of the IEEE International Symposium on Software Reliability Engineering (ISSRE)</i>, pp. 144-155, December 2014. (Acceptance Ratio: 25% = 31/124)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5bzRpWUFudFNkTVE/view?resourcekey=0-6Tqujsc4c5JaAQisibKgxw>Paper</a> <a href=https://drive.google.com/file/d/11wsyxXm9PEBuXLVL7tFPUv5n0XsWq4hB/view>Slide</a>
- <hr>
- We observe many interesting failure characteristics from Big Data software developed and released using some kinds of highly iterative development models (e.g., agile). ~16% of failures occur due to faults in software deployments (e.g., packaging and pushing to production). Our analysis shows that many such production outages are at least partially due to some human errors rooted in the high frequency and complexity of software deployments. ~51% of the observed human errors (e.g., transcription, education, and communication error types) are avoidable through automation. We thus develop a fault-tolerant automation framework to make it efficient to automate end-to-end software deployment procedures. We apply the framework to two Big Data products. Our case studies show the complexity of the deployment procedures of multi-homed Big Data applications and help us to study the effectiveness of the validation and verification techniques for user-provided automation programs. We analyze the production failures of the two products again after the automation. Our experimental data shows how the automation and the associated procedure improvements reduce the deployment faults and overall failure rate, and improve the feature launch velocity. Automation facilitates more formal, procedure-driven software engineering practices which not only reduce the manual work and human-oriented, avoidable production outages but also help engineers to better understand overall software engineering procedures, making them more auditable, predictable, reliable, and efficient. We discuss two novel metrics to evaluate progress in mitigating human errors and the conditions indicating points to start such transition from owner-driven deployment practice.
- <br><p><li>K. S. Yim, <br><b>"Characterization of Impact of Transient Faults and Detection of Data Corruption Errors in Large-Scale N-Body Programs Using Computational Accelerators,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 458-467, May 2014. (Acceptance Ratio: 21.1% = 114/541)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5a0R6UHJ5YjhGVEU/view?resourcekey=0-FfB-OGv13dbCC4rMOBvCwA>Paper</a> <a href=https://drive.google.com/file/d/1A0pba-tjyarRL9IqdMWEfHk-vEJEkT7w/view>Slide</a>
-<hr>
- In N-body programs, trajectories of simulated particles have chaotic patterns if errors are in the initial conditions or occur during some computation steps. It was believed that the global properties (e.g., total energy) of simulated particles are unlikely to be affected by a small number of such errors. In this paper, we present a quantitative analysis of the impact of transient faults in GPU devices on a global property of simulated particles. We experimentally show that a single-bit error in non-control data can change the final total energy of a large-scale N-body program with ~2.1% probability. We also find that the corrupted total energy values have certain biases (e.g., the values are not a normal distribution), which can be used to reduce the expected number of re-executions. In this paper, we also present a data error detection technique for N-body programs by utilizing two types of properties that hold in simulated physical models. The presented technique and an existing redundancy-based technique together cover many data errors (e.g., >97.5%) with a small performance overhead (e.g., 2.3%).
-<br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 8,812,771, August 19, 2014 (Filed on February 12, 2010).
-<br><p><li>K. S. Yim, <br><b>"Storage device including a file system manager for managing multiple storage media,”</b><br><i> United States Patent</i>, No. 8,892,520, November 18, 2014 (Filed on January 23, 2009).
-<br><a name="rp1"><p><li>K. S. Yim, J.-j. Yoo, J.-w. Kim, S.-j. Ryu, J.-K. Park, J.-d. Lee, Y.-s. Shin, <br><b>"Multitasking method and apparatus for reconfigurable array,”</b><br><i> United States Patent</i>, No. 8,645,955, February 4, 2014 (Filed on June 12, 2007).
-<br><p><li>J.-K. Park, K. S. Yim, W.-g. Kim, J.-j. Yoo, K.-h. Kang, C.-s. Im, J.-d. Lee, <br><b>"Method, medium and apparatus storing and restoring register context for fast context switching between tasks,”</b><br><i>United States Patent</i>, No. 8,635,627, January 21, 2014 (Filed on December 12, 2006).
-
-<!-[2013]-->
-<br><p><li>K. S. Yim, <br><b>From Experiment To Design – Fault Characterization and Detection in Parallel Computer Systems Using Computational Accelerators</b>,<br><i>Ph.D. Dissertation</i>, <i>University of Illinois at Urbana-Champaign</i>, May 2013.
- <br><a href=https://www.ideals.illinois.edu/handle/2142/44390>e-Library</a>
-
-  <br><a name="IPDPS2013"><p><li>K. S. Yim, Z. Kalbarczyk, and R. K. Iyer, <br><b>"Pluggable Watchdog: Transparent Failure Detection for MPI Programs,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 489-500, May 2013. (Acceptance Ratio: 21.8% = 108/494)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5SEk3VDdhVTBTa1U/view?resourcekey=0-kev7yv9rEGZI5hrUuk0I-Q>Paper</a> <a href=https://drive.google.com/file/d/10_xdhazYxMgLH1Icg-Eq397EJhpPM4WE/view>Slide</a>
- <hr>
- This paper presents a framework and its techniques that can detect various types of runtime errors and failures in MPI programs. The presented framework offloads its detection techniques to an external device (e.g., extension card). By developing intelligence on the normal behavioral and semantic execution patterns of monitored parallel threads, the presented external error detectors can accurately and quickly detect errors and failures. This architecture allows us to use powerful detectors without directly using the computing power of the monitored system. The separation of hardware of the monitored and monitoring systems offers an extra advantage in terms of system reliability. We have prototyped our system on a parallel computer system by using an FPGA-based PCI extension card as a monitoring device. We have conducted a fault injection experiment to evaluate the presented techniques using eight MPI-based parallel programs. The techniques cover ~98.5% of faults, on average. The average performance overhead is 1.8% for techniques that detect crash and hang failures and 6.6% for techniques that detect SDC failures.
-<br><p><li>K. S. Yim, J. C. Son, B. Y. Chung, <br><b>"Storage device reducing a memory management load and computing system using the storage device,”</b><br><i> United States Patent</i>, No. 8,443,144, May 14, 2013 (Filed on July 21, 2008).
-<br><p><li>H.-c. Kim, K. S. Yim, S.-W. Lee, J.-j. Yoo, J.-d. Lee, Y.-s. Shin, <br><b>"Apparatus and method of detecting errors in embedded software,”</b><br><i> United States Patent</i>, No. 8,589,889, November 19, 2013 (Filed on November 13, 2007).
-
-  <!-[2012]-->
-<br><a name="Aerospace2012"><p><li>K. S. Yim, V. Sieda, Z. Kalbarczyk, D. Chen, and R. K. Iyer, <br><b>"A Fault-Tolerant Programmable Voter for Software-Based N-Modular Redundancy,”</b><br>in <i>Proceedings of the IEEE Aerospace Conference</i>, 20 pages, March 2012.
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5cUdTWEdsNzFpWWc/view?resourcekey=0-pluUi3xYbuxmEyz--h4ieA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5XzJYT3dIYmdsdm8/view?resourcekey=0-ZCkEqu9cqp95IGVejAaPUA>Slide</a>
- <hr>
- This paper presents a fault-tolerant, programmable voter architecture for software-implemented N-tuple modular redundant (NMR) computer systems. Software NMR is a cost-efficient solution for high-performance, mission-critical computer systems because this can be built on top of commercial off-the-shelf (COTS) devices. Due to the large volume and randomness of voting data, software NMR system requires a programmable voter. Our experiment shows that voting software that executes on a processor has the time-of-check-to-time-of-use (TOCTTOU) vulnerabilities and is unable to tolerate long duration faults. In order to address these two problems, we present a special-purpose voter processor and its embedded software architecture. The processor has a set of new instructions and hardware modules that are used by the software in order to accelerate the voting software execution and address the identified two reliability problems. We have implemented the presented system on an FPGA platform. Our evaluation result shows that using the presented system reduces the execution time of error detection codes (commonly used in voting software) by 14% and their code size by 56%. Our fault injection experiments validate that the presented system removes the TOCTTOU vulnerabilities and recovers under both transient and long duration faults. This is achieved by using 0.7% extra hardware in a baseline processor.
-<br><p><li>K. S. Yim, C. H. Lee, <br><b>"Memory device and management method of memory device,”</b><br><i> United States Patent</i>, No. 8,321,624, November 27, 2012 (Filed on May 27, 2009).
-<br><p><li>K. S. Yim, G. S. Choi, <br><b>"Storage management method and system using the same,”</b><br><i> United States Patent</i>, No. 8,171,239, May 1, 2012 (Filed on March 20, 2008).
-<br><p><li>Y.-S. Shin, S.-w. Lee, H.-C. Kim, J.-j. Yoo, J.-d. Lee, M.-k. Jeong, and K. S. Yim,<br><b>"Transmitting and receiving method and apparatus in real-time system,”</b><br><i> United States Patent</i>, No. 8,194,658, June 5, 2012 (Filed on November 7, 2007).
-<br><a name="kerneldebugger"><p><li>K. S. Yim, J.-k. Park, J.-j. Yoo, J.-d. Lee, C.-s. Im, Y.-S. Shin, <br><b>"Kernel-Aware Debugging System, Medium, and Method,"</b><br><i> United States Patent</i>, No. 8,239,838, August 7, 2012 (Filed on May 7, 2007); EU Patents, No. EP1870810A2, No. EP1870810A3.
-<br><p><li>J. D. Lee, K. S. Yim, W. G. Kim, J. J. Yoo, J. K. Park, C.-W. Baek, C. S. Im, <br><b>"Method and System for Providing Context Switch using Multiple Register File,"</b><br><i> United States Patent</i>, No. 8,327,122, December 4, 2012 (Filed on March 2, 2007).
-<br><p><li>K. S. Yim, J. J. Yoo, J. K. Park, C. S. Im, J. D. Lee, W. G. Kim, S. H. Choi, <br><b>"Method, System, and Medium for Providing Interprocessor Data Communication,”</b><br><i> United States Patent</i>, No. 8,127,110, February 28, 2012 (Filed on January 17, 2007).
-
-<!-[2011]-->
-<br><a name="IPDPS2011"><p><li>K. S. Yim, C. Pham, M. Saleheen, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Hauberk: Lightweight Silent Data Corruption Error Detector for GPGPU,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 287-300, May 2011. (Acceptance Rate: 19.6% = 112/571)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5S2ZZaWFkb04xYXc/view?resourcekey=0-XNszuc1_2uhvHRJKxZEEBA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5MERFcEROQXdJWmc/view?resourcekey=0-4deB4LXvuQL_NbWokR1mog>Slide</a>
- <hr>
- High performance and relatively low cost of GPU-based platforms provide an attractive alternative for general purpose high performance computing (HPC). However, the emerging HPC applications have usually stricter output correctness requirements than typical GPU applications (i.e., 3D graphics). This paper first analyzes the error resiliency of GPGPU platforms using a fault injection tool we have developed for commodity GPU devices. On average, 16-33% of injected faults cause silent data corruption (SDC) errors in the HPC programs executing on GPU. This SDC ratio is significantly higher than that measured in CPU programs (<2.3%). In order to tolerate SDC errors, customized error detectors are strategically placed in the source code of target GPU programs so as to minimize performance impact and error propagation and maximize recoverability. The presented HAUBERK technique is deployed in seven HPC benchmark programs and evaluated using a fault injection. The results show a high average error detection coverage (~87%) with a small performance overhead (~15%).
-
-<br><a name="LNCS2011"><p><li>K. S. Yim, D. Hreczany, and R. K. Iyer, <br><b>"A Hybrid Testing Automation Framework to Leverage Local and Global Computing Resources,”</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, 6784:479-494, June 2011. (Impact Factor: 0.97)
- <br><a href=https://link.springer.com/chapter/10.1007/978-3-642-21931-3_37>LNCS</a>
-<hr>
- In web application development, testing forms an increasingly large portion of software engineering costs due to the growing complexity and short time-to-market of these applications. This paper presents a hybrid testing automation framework (HTAF) that can automate routine works in testing and releasing web software. Using this framework, an individual software engineer can easily describe his routine software engineering tasks and schedule these described tasks by using both his local machine and global cloud computers in an efficient way. This framework is applied to commercial web software development processes. Our industry practice shows four example cases where the hybrid and decentralized architecture of HTAF is helpful at effectively managing both hardware resources and manpower required for testing and releasing web applications.
-<br><p><li>K. S. Yim, J.-j. Yoo, Y.-s. Shin, S.-w. Lee, H.-c. Kim, J.-d. Lee, M.-k. Jeong, <br><b>"Method of managing memory in multiprocessor system on chip,”</b><br><i> United States Patent</i>, No. 7,996,630, August 9, 2011 (Filed on August 11, 2010).
-<br><p><li>J. D. Lee, S.-w. Lee, J.-j. Yoo, Y.-s. Shin, M.-k. Jeong, and K. S. Yim, <br><b>"Method, medium and apparatus managing memory,”</b><br><i> United States Patent</i>, No. 7,895,408, February 22, 2011 (Filed on December 20, 2007).
-
-  <!-[2010]-->
-<br><a name="DSN2010"><p><li>K. S. Yim, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Measurement-based Analysis of Fault and Error Sensitivities of Dynamic Memory,”</b><br>in <i>Proceedings of the IEEE International Conference on Dependable Systems and Networks (DSN)</i>, pp. 431-436, June 2010. (Practical Experience Report)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5U042dmwwX3drejQ/view?resourcekey=0-WLsiO7EF2f8ueJoqjVAc7g>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5OEdnamhOSDRsTkU/view?resourcekey=0-uLQE3J6rdPJnW71_YfACOQ>Slide</a>
- <hr>
- This paper presents a measurement-based analysis of the fault and error sensitivities of dynamic memory. We extend a software-implemented fault injector to support data-type-aware fault injection into dynamic memory. The results indicate that dynamic memory exhibits about 18 times higher fault sensitivity than static memory, mainly because of the higher activation rate. Furthermore, we show that errors in a large portion of static and dynamic memory space are recoverable by simple software techniques (e.g., reloading data from a disk). The recoverable data include pages filled with identical values (e.g., ‘0’) and pages loaded from files unmodified during the computation. Consequently, the selection of targets for protection should be based on knowledge of recoverability rather than on error sensitivity alone.
-<br><p><li>K. S. Yim, J.-j. Yoo, Y.-s. Shin, S.-w. Lee, H.-c. Kim, J.-d. Lee, M.-k. Jeong, <br><b>"Method of managing memory in multiprocessor system on chip,”</b><br><i> United States Patent</i>, No. 7,805,582, Septemer 28, 2010 (Filed on September 13, 2007).
-<br><a name="rp2"><p><li>K. S. Yim, J. W. Kim, S. J. Ryu, J. K. Park, J. J. Yoo, D.-H. Yoo, C. S. Im, J. D. Lee, H. S. Kim, <br><b>"Method, medium, and Apparatus with Interrupt Handling in a Reconfigurable Array,"</b><br><i> United States Patent</i>, No. 7,836,291, November 16, 2010 (Filed on October 17, 2006).
-<br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 7,689,761, March 30, 2010 (Filed on July 13, 2006).
-<br><p><li>K. S. Yim, J. D. Lee, J.-J. Yoo, K.-h. Kang, J.-k. Park, C.-s. Im, W.-g. Kim, C.-w. Baek, <br><b>"Method for reducing code size of a program in code memory by dynamically storing an instruction into a memory location following a group of instructions indicated by an offset operand and either a length operand or a bitmask operand of an echo instruction,”</b><br><i> United States Patent</i>, No. 7,831,809, November 9, 2010 (Filed on August 28, 2006).
-
-  <!-[2009]-->
-<br><a name="PRDC2009"><p><li>K. S. Yim, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Quantitative Analysis of Long Latency Failure in System Software,”</b><br>in <i>Proceedings of the IEEE Pacific Rim International Symposium on Dependable Computing (PRDC)</i>, pp. 23-30, November 2009.
- <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5WlMwdzdlWFNBYlU/view?resourcekey=0-u-7AU1rcfEAtExkn4Xmlow>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5WXFPbEhjdzlwNEk/view?resourcekey=0-BjeVAT9X5WB7w0lXN7UtHg>Slide</a>
- <hr>
- This paper presents a study on long latency failures using accelerated fault injection. The data collected from the experiments are used to analyze the significance, causes, and characteristics of long latency failures caused by soft errors in the processor and the memory. The results indicate that a non-negligible portion of soft errors in the code and data memory lead to long latency failures. The long latency failures are caused by errors with long fault activation times and errors causing failures only under certain runtime conditions. On the other hand, less than 0.5% of soft errors in the processor registers used in kernel mode lead to a failure with latency longer than a thousand seconds. This is due to a strong temporal locality of the register values. The study shows also that the obtained insight can be used to guide design and placement (in the application code and/or system) of application-specific error detectors.
-
-  <!-[2008]-->
-<br><a name="OLS2008"><p><li>K. S. Yim and J. C. Son, <br><b>"SynergyFS: A Stackable File System Creating Synergies Between Heterogeneous Storage Devices,”</b><br>in <i>Proceedings of the Ottawa Linux Symposium (OLS)</i>, pp. 255-259, July 2008.
-<br><a href=https://drive.google.com/file/u/3/d/0B6O4tPGQDZl5dDhEZUZpMERWYk0/view?usp=drive_open>Paper</a>
-<hr>
- Hybrid storage architecture is one efﬁcient method that can optimize the I/O performance, cost, and power consumption of storage systems. Thanks to the advances in semiconductor and optical storage technology, its application area is being expanded. It tries to store data to the most proper medium by considering I/O locality of the data. Data management between heterogeneous storage media is important, but it was manually done by system users.This paper presents an automatic management technique for a hybrid storage architecture. A novel software layer is deﬁned in the kernel between virtual and physical ﬁle systems. The proposed layer is a variant of stackable ﬁle systems, but is able to move ﬁles between heterogeneous physical ﬁle systems. For example, by utilizing the semantic information (e.g., ﬁle type and owner process), the proposed system optimizes the I/O performance without any manual control. Also as the proposed system concatenates the storage space of physical ﬁle systems, its space overhead is negligible. Speciﬁc characteristics of the proposed systems are analyzed through performance evaluation.
-
-  <!-[2007]-->
-
-  <!-[2006]-->
-<br><a name="LNCS2006"><p><li>K. S. Yim, J. D. Lee, J. Park, C. Im, J.-J. Yoo, and Y. Ryu, <br><b>"A Software Reproduction of Virtual Memory for Deeply Embedded Systems,”</b><br><i>Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3980:1000-1009, May 2006. (SCIE, Impact Factor: 1.21)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ckFLdjV5ZGREWG8/view?resourcekey=0-MudjGBsn_zTu4sfER8fVcg>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ck16OWw3NXRqNnc/view?resourcekey=0-iGXPlo01RfxIiJLhevWhRw>Slide</a>
- <hr>
- Both the hardware cost and power consumption of computer systems heavily depend on the size of main memory, namely DRAM. This becomes important especially in tiny embedded systems (e.g., micro sensors) since they are produced in a large-scale and have to operate as long as possible, e.g., ten years. Although several methods have been developed to reduce the program code and data size, most of them need extra hardware devices, making them unsuitable for the tiny systems. For example, virtual memory system needs both MMU and TLB devices to execute large-size program on a small memory. This paper presents a software reproduction of the virtual memory system especially focusing on paging mechanism. In order to logically expand the physical memory space, the proposed method compacts, compresses, and swaps in/out heap memory blocks, which typically form over half of the whole memory size. A prototype implementation verifies that the proposed method can expand memory capacity by over twice. As a result, large size programs run in parallel with a reasonable overhead, comparable to that of hardware-based VM systems.
-<br><a name="LNCS2006cata"><p><li>L.-z. Han, Y. Ryu, and K. S. Yim, <br><b>"CATA: A Garbage Collection Scheme for Flash Memory File Systems,"</b><br><i>Lecture Notes in Computer Science (LNCS)</i>, 4159:103-112, September 2006. (SCIE, Impact Factor: 1.21)
-<br><a href=https://link.springer.com/chapter/10.1007/11833529_11>LNCS</a>
-<br><a name="RTCSA2006"><p><li>K. S. Yim, J.-J. Yoo, J. D. Lee, and J. Kim, <br><b>"Operating System Support for Procedural Abstraction in Embedded Systems,”</b><br>in <i>Proceedings of the IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA)</i>, pp. 378-382, August 2006. (Acceptance Ratio: 32%)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5QzNsdUExT3N0QTg/view?resourcekey=0-bSt9MGOiRImzRzi8YMGZbA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5QkJiT0trMUlEenc/view?resourcekey=0-cURatc174a78An3EBiBl6w>Slide</a>
- <hr>
- Procedural abstraction reduces code size by replacing repeated code fragments with call instructions to a sub-routine that executes the repeated fragment. However, in order to build a subroutine, extra instructions are necessary to support the procedural call mechanism. In this paper, we present an operating system level technique which improves the space efficiency of a procedural abstraction-based code compaction technique. The call-related extra instructions are not used in the proposed technique because operating system routines implicitly supports the procedure call and return. The proposed technique consists of three execution modes including one applicable to ROM-based systems. The experimental results show the proposed technique reduces the code size significantly while increasing the execution time slightly.
-
-<!-[2005]-->
-<br><a name="JSTS2005"><p><li>K. S. Yim, <br><b>"A Novel Memory Hierarchy for Flash Memory Based Storage Systems,”</b><br><i> Journal of Semiconductor Technology and Science (JSTS)</i>, ISSN 1598-1657, 5(4):69-76, December 2005. (Impact Factor: 0.13)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5SlJnbks1eVhWMEE/view?resourcekey=0-We_xUYYe-pDnILjnhagJtA>Paper</a>
-<hr>Semiconductor scientists and engineers ideally desire the faster but the cheaper non-volatile memory devices. In practice, no single device satisfies this desire because a faster device is expensive and a cheaper is slow. Therefore, in this paper, we use heterogeneous non-volatile memories and construct an efficient hierarchy for them. First, a small RAM device (e.g., MRAM, FRAM, and PRAM) is used as a write buffer of flash memory devices. Since the buffer is faster and does not have an erase operation, write can be done quickly in the buffer, making the write latency short. Also, if a write is requested to a data stored in the buffer, the write is directly processed in the buffer, reducing one write operation to flash storages. Second, we use many types of flash memories (e.g., SLC and MLC flash memories) in order to reduce the overall storage cost. Specifically, write requests are classified into two types, hot and cold, where hot data is vulnerable to be modified in the near future. Only hot data is stored in the faster SLC flash, while the cold is kept in slower MLC flash or NOR flash. The evaluation results show that the proposed hierarchy is effective at improving the access time of flash memory storages in a cost-effective manner thanks to the locality in memory accesses.
-
-<br><a name="SAC2005"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"A Fast Start-Up Technique for Flash Memory Based Computing Systems,”</b><br>in <i>Proceedings of the ACM Symposium on Applied Computing (SAC)</i>, pp. 852-858, March 2005. (Acceptance Ratio: 36.39% = 278/764)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5OFRBUG9zcjVUazg/view?resourcekey=0-rYA6jeGT9zxDwPgK337-Dg>Paper</a>
-<hr>Flash memory based embedded computing systems are becoming increasingly prevalent. These systems typically have to provide an instant start-up time. However, we observe that mounting a file system for flash memory takes 1 to 25 seconds mainly depending on the flash capacity. Since the flash chip capacity is doubled in every year, this mounting time will soon become the most dominant reason of the delay of system start-up time. Therefore, in this paper, we present instant mounting techniques for flash file systems by storing the in-memory file system metadata to flash memory when unmounting the file system and reloading the stored metadata quickly when mounting the file system. These metadata snapshot techniques are specifically developed for NOR- and NAND-type flash memories, while at the same time, overcoming their physical constraints. The proposed techniques check the validity of the stored snapshot and use the proposed fast crash recovery techniques when the snapshot is invalid. Based on the experimental results, the proposed techniques can reduce the flash mounting time by about two orders of magnitude over the existing de facto standard flash file system.
-
-<br><p><li>K. S. Yim, <br><b>"Studies on compressed memory architectures and decentralized communication systems for ubiquitous computing,”</b><br>Master’s Thesis, Seoul National U., February 2005.
-
-<!-[2004]-->
-<br><a name="TCE2004"><p><li>K. S. Yim, H. Bahn, and K. Koh, <br><b>"A Flash Compression Layer for SmartMedia Card Systems,”</b><br><i> IEEE Transactions on Consumer Electronics (TCE)</i>, 50(1):192-197, February 2004. (Impact Factor: 0.73)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ZGZ3Nk53WS1DN28/view?resourcekey=0-zGs82yz-ePui8hb_bQnR-A>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5UUhIRFBQTExQT0k/view?resourcekey=0-ryZuwHF6OzAQ64hjL9C-yw>Slide</a>
-<hr>Flash memory based SmartMedia Card is becoming increasingly popular as data storage for mobile consumer electronics. Since flash memory is an order of magnitude more expensive than magnetic disks, data compression can be effectively used in managing flash memory based storage systems. However, compressed data management in flash memory is challenging because it only supports page-based I/Os. For example, when the size of compressed data is smaller than the page size, internal fragmentation occurs and this degrades the effectiveness of compression seriously. In this paper, we developed a flash compression layer (FCL) for the SmartMedia Card systems. FCL stores several small compressed pages into one physical page by using a write buffer. Based on prototype implementation and simulation studies, we show that the proposed system offers the storage of flash memory more than 140% of its original size and expands the write bandwidth significantly.
- 
-<br><a name="LNCS2004a"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"An Energy-Efficient Reliable Transport for Wireless Sensor Networks,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3090:54-64, February 2004. (SCIE, Impact Factor: 1.45)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5T29Cc056SnhQbm8/view?resourcekey=0-7N37bHjcwkw2-j6OMI6q9w>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5TG81OFh1eVFQYW8/view?resourcekey=0-9f9K4Ag3dLcju7z8CdhbXg>Slide</a>
-<hr>In a wireless sensor network, sensor devices are connected by unreliable radio channels. Thus, the reliable packet delivery is an important design challenge. The existing sensor-to-base reliable transport mechanism, however, depends on a centralized manager node, incurring large control overheads of synchronizing reporting frequencies. In this paper, we present a decentralized reliable transport (DRT) with two novel decentralized reliability control schemes. First, we propose an independent reporting scheme where each sensor node stochastically makes reporting decisions. Second, we describe a cooperative reporting scheme where every sensor node implicitly cooperates with its neighbors for the uniform reporting. In the reporting step, DRT uses a reliable MAC channel, which is specifically optimized for reducing the energy dissipation. Experimental results show that DRT satisfies the desired delivery rate reliably in a decentralized manner while it significantly reduces the energy consumption of the radio device and the communication time.
-
-<br><a name="LNCS2004b"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"An Energy-Efficient Routing and Reporting Scheme to Exploit Data Similarities in Wireless Sensor Networks,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3207:515-527, August 2004. (SCIE, Impact Factor: 1.45)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5b1prS3g4amZSVzQ/view?resourcekey=0-T0L0GVzrvo5J2srE2GLlVA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5RkdMWGZzMXo0ZGM/view?resourcekey=0-DKy4plle5cMv6JBC3B0_vQ>Slide</a>
-<hr>Wireless sensor networks are based on a large number of tiny sensor nodes, which collect various types of physical data. These sensors are typically energy-limited and low-power operation is an important design constraint. In this paper, we propose a novel routing and reporting scheme based on sample data similarities commonly observed in sensed data. Based on reliable transport protocols, the proposed scheme takes advantage of the spatial and temporal similarities of the sensed data, reducing both the number of sensor nodes that are asked to report data and the frequency of those reports. Experimental results show that the proposed scheme can significantly reduce the communication energy consumption of a wireless sensor network while incurring only a small degradation in sensing accuracy.
-
-<br><a name="LNCS2004compression"><p><li>K. S. Yim, J.-S. Lee, J. Kim, S.-D. Kim, and K. Koh, <br><b>"A Space-Efficient On-Chip Compressed Cache Organization for High Performance Computing,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3358:952-964, December 2004. (SCIE, Impact Factor: 1.45)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5R2tsMVUzWE92ZXc/view?resourcekey=0-knKRKCbpJAUg1dU98kNsjg>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5T0VGdUlfVkFhY3c/view?resourcekey=0-8iQoHObEA4H4btaeo4mrIQ>Slide</a>
-<hr>In order to alleviate the ever-increasing processor-memory performance gap of high-end parallel computers, on-chip compressed caches have been developed that can reduce the cache miss count and off-chip memory traffic by storing and transferring cache lines in a compressed form. However, we observed that their performance gain is often limited due to their use of the coarse-grained compressed cache line management which incurs internally fragmented space. In this paper, we present the fine-grained compressed cache line management which addresses the fragmentation problem, while avoiding an increase in the metadata size such as tag field and VM page table. Based on the SimpleScalar simulator with the SPEC benchmark suite, we show that over an existing compressed cache system the proposed cache organization can reduce the memory traffic by 15%, as it delivers compressed cache lines in a fine-grained way, and the cache miss count by 23%, as it stores up to three compressed cache lines in a physical cache line.
-
-<br><a name="LNCS2004nicnet"><p><li>K. S. Yim, H. Cha, and K. Koh, <br><b>"NIC-NET: A Host-Independent Network Solution for High-End Network Servers,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3320:401-405, December 2004. (SCIE, Impact Factor: 1.45)
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5XzFxNDI2UWhhMjQ/view?resourcekey=0-4uED7N2VodTnGj6RYNQE4Q>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5Zzd1LTNEMnNKLVk/view?resourcekey=0-G6d5MR9_bTQsPIesSwyebA>Slide</a>
-<hr>This paper discusses a host-independent network system where a network interface card is utilized in an efficient way. By eliminating protocol stack processing overheads from host system, the proposed system improves the communication speed by 11-36% under heavy network and CPU loads.
-<br><p><li>K. S. Yim, S. Lee, and K. Koh, <br><b>"An Energy-Efficient Compression Algorithm for Wireless Communication,"</b><br>in <i>Proceedings of the International SoC Design Conference (ISOCC)</i>, pp. 578-581, November 2004.
-
-  <!-[2003]-->
-<br><a name="PDPTA2003"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"Performance Analysis of On-Chip Cache and Main Memory Compression Systems for High-End Parallel Computers,"</b><br>in <i>Proceedings of the International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA)</i>, pp. 469-475, June 2003.
-<br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ZDROUXhfUmszRkk/view?resourcekey=0-wl782tBmGNHfaHV_uE8vqw>Paper</a>
-<hr>Cache and memory compression systems have been developed for improving memory system performance of high-performance parallel computers. Cache compression systems can reduce on-chip cache miss rate and off-chip memory traffic by storing and transferring cache lines in compressed form, while memory compression systems can expand main memory capacity by storing memory pages in compressed form. However, these systems have not been quantitatively evaluated on an identical condition, making it difficult to understand the performance of a new system relative to the existing systems. In this paper, we provide an identical execution-driven simulation environment for these systems. To the best of our knowledge, none has been evaluated the performance of cache and memory compression systems by using an execution-driven simulator. Experimental results show that cache compression systems reduce cache miss rate by 16% and memory traffic by 30%, while it expands memory capacity by less than 160%. The results also show that memory compression systems significantly expand memory capacity by over 270%. Based on these experimental analyses, we finally provide future research directions on the compression systems.
- 
-<!-[2002]-->
-<br><p><li>K. S. Yim, <br><b>"Utilizing Network Interface Card for Host-Independent Network Systems,”</b><br>in <i>Proceedings of Samsung Human-tech Thesis Prize (Undergrad Division)</i>, February 2002.
-
-<!-[2001]-->
-<br><p><li>K. S. Yim, <br><b>"The Perfect Analysis of Linux Kernel for Implementing General-Purpose Operating System,"</b><br> distributed to the open source communities, August 2001.
-<br><p><li>K. S. Yim, <br><b>"Design and Implementation of a General-Purpose Remote Control System,"</b><br>in <i>Proceedings of the Samsung Human-tech Thesis Prize (Undergrad Division)</i>, February 2001.
-</ol>
-
-<p><hr>
-Return to the <a href=#topmenu>top</a>.<br>
-</body>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W9WV6CMYG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5W9WV6CMYG');
+    </script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body bgcolor=#fffff1 style='max-width:900px'>
+    <a name="TopMenu"><div class="topnav">
+      <a href=index.html>Main</a>
+      <a href=pubs.html>Papers</a>
+      <a href=tr.html>Disclosures</a>
+      <a href=proc.html>Books</a>
+      <a href=bibs.html>BibTeX</a>
+      <a href=name.html>Name</a>
+      <a href=https://sites.google.com/site/keunsooyim/>Wiki</a>
+    </div>
+    
+    <h1>Keun Soo YIM</h1>
+    
+    <hr><h3>Education</h3><ul>
+      <li>Ph.D., <i>Computer Science (CS)</i>, UIUC
+      <li>M.Sc., <i>Electrical Engr & CS</i>, Seoul Natl. U
+      <li>B.Sc., <i>Electrical and Electronics Engr</i>, Yonsei
+      <li>B.Sc., <i>CS & Industrial Systems Engr</i>, Yonsei
+    </ul>
+    
+    <h3>Employment</h3><ul>
+      <li>Google (2012-present)
+      <li>IBM T. J. Watson (Summer 2011)
+      <li>Samsung Advanced Institute of Technology (2005-2008)
+    </ul>
+    
+    <h3>Honors</h3><ul>
+      <li>Senior Member, IEEE (2022)
+      <li>Samsung Human-tech Thesis Prize, Gold for CS&E (2011)
+    </ul>
+    
+    <p><hr><h2>Contents</h2>
+    <table border=1 style='border-collapse:collapse'>
+      <tr style="text-align:center">
+        <td width=75px>&nbsp;
+        <td width=165px><b>Efficiency & Scalability</b><br><small>[1999-]</small>
+        <td width=165px><b>Dependability & Measurement</b><br><small>[2007-]</small>
+        <td width=165px><b>Quality & Productivity</b><br><small>[2011-]</small>
+        <td width=165px><b>Security & Privacy</b><br><small>[2015-]</small>
+        <td width=165px><b>Usability</b><br><small>[2019-]</small>
+      </tr>
+      <tr style="text-align:center">
+        <td><b>GAI</b><br><small>Generative AI</small>
+        <td>&nbsp;
+        <td>Forecasting <small><a href="#Forecasting">arXiv</a></small>
+        <td>&nbsp;
+        <td>&nbsp;
+        <td>&nbsp;
+      </tr>
+      <tr style="text-align:center">
+        <td><b>IR</b><br><small>Information Retrieval</small>
+        <td>Entity Pivoting <small><a href="#entitypivoting">Patent</a></small>
+          <br>App Indexing <small><a href="tr.html#AppIndexingCap">Report'24</a> <a href="tr.html#AppEntity">Report'23</a></small>
+        <td>App Automation <small><a href="#appautomation">Patent</a></small>
+        <td>RAG <small><a href="tr.html#RAG">Report</a>
+        <td>&nbsp;
+        <td>Benchmark <small><a href=#ToQB>arXiv</a></small>
+          <br>RL for HCI <small><a href="tr.html#RL">Report</a></small>
+      </tr>
+      <tr style="text-align:center">
+        <td><b>ML</b><br><small>Machine Learning</small>
+        <td>&nbsp;
+        <td>GPGPU <small><a href="#IPDPS2011">IPDPS'11</a></small>
+          <br>Watchdog <small><a href="#IPDPS2013">IPDPS'13</a></small>
+          <br>Unsupervised learning <small><a href="#IPDPS2014">IPDPS'14</a></small>
+        <td>Bigdata monitoring <small><a href="#ISSRE2016">ISSRE'16</a></small>
+        <td>Review bot <small><a href="#VP">pre-print</a></small>
+          <br>Virtual assistant <small><a href="#assistantprivacy">Patent</a></small>
+        <td>RecSys <small><a href="#autocompletefulfillment">Patent</a></small>
+      </tr>
+      <tr style="text-align:center">
+        <td><b>SE</b><br><small>Software Engineering</small>
+        <td>Debugger <small><a href="#kerneldebugger">Patent</a></small><!--Code coverage & profiling-->
+        <td>&nbsp;
+        <td>Release & deployment  <small><a href="#ISSRE2014">ISSRE'14</a></small>
+          <br>Testing infra <small><a href="#LNCS2011">LNCS'11</a></small>
+          <br>MapReduce testing <small><a href="#mapreduce">Patent</a></small>
+        <td>Security assessment <small><a href="#BC2023">Book chapter</a></small>
+          <br>System fuzzing <small><a href="#OnlineLecture2017">Videos</a></small>
+        <td>&nbsp;
+      </tr>
+      <tr style="text-align:center">
+        <td><b>OS</b><br><small>Operating Systems</small>
+        <td>Fast booting <small><a href="#SAC2005">SAC'05</a></small>
+          <br>Low-power WSNs <small><a href="#LNCS2004a">LNCS'04a</a> <a href="#LNCS2004b">LNCS'04b</a></small>
+          <br>Real-time OS <small><a href="#LNCS2006">LNCS'06</a></small>
+          <br>SynergyFS <small><a href="#OLS2008">OLS'08</a></small>
+          <br>OS jitter <small><a href="#jitter">Patent</a></small>
+        <td>Experimental validation <small><a href="#DSN2010">DSN'10</a> <a href="#DSN2009">PRDC'09</a></small>
+        <td>API compliance for ecosystem <small><a href="#SOSP2017tutorial">Tutorial'17</a></small>
+          <br>Android virtual device <small><a href="#AndroidVirtualDevice">Patent</a></small>
+        <td>Android updatability <small><a href="#TECS2019">TECS'19<a></small>
+          <br>System security <small><a href="#SRDS2016">SRDS'16</a></small>
+        <td>&nbsp;
+      </tr>
+      <tr style="text-align:center">
+        <td><b>ComSys</b><br><small>Computer Systems</small>
+        <td>Flash storage <small><a href="#JSTS2005">JSTS'05</a> <a href="#TCE2004">TCE'04</a></small>
+          <br>Code optimization <small><a href="#RTCSA2006">RTCSA'06</a></small>
+          <br>Compressed memory <small><a href="#LNCS2004compression">LNCS'04c</a> <a href="#PDPTA2003">PDPTA'03</a></small>
+          <br>Reconfigurable processor <small><a href="#rp1">Patent1</a> & <a href="#rp2">2</a></small>
+        <td>Co-processor <small><a href="#Aerospace2012">Aerospace'12</a></small>
+        <td>&nbsp;
+        <td>&nbsp;
+        <td>&nbsp;
+      </tr>
+    </table>
+    <!--Linux kernel, and open source ecosystem. Hardware-software co-design-->
+    <p><hr><h2>My Papers and Patents</h2>
+    <ol>
+      <!--[2025]-->
+      <a name="Forecasting"><p><li>K. S. Yim,<br><b>"Evaluation of a Foundational Model and Stochastic Models for Forecasting Sporadic or Spiky Production Outages of High-Performance Machine Learning Services,"</b><br>
+      <i>arXiv:2507.01067</i>,
+      2025.
+      <br><a href=https://arxiv.org/abs/2507.01067>pre-print</a>
+      <hr>
+      Time series forecasting models have diverse real world applications (e.g., from electricity metrics to software workload). Latest foundational models trained for time series forecasting show strengths (e.g., for long sequences and in zero-shot settings). However, foundational model was not yet used for forecasting rare, spiky events, i.e., a challenging target because those are a corner case of extreme events. In this paper, we optimize a state-of-the-art foundational model to forecast sporadic or spiky production outages of high-performance machine learning services powering billions of client devices. We evaluate the forecasting errors of the foundational model compared with classical stochastic forecasting models (e.g., moving average and autoregressive). The analysis helps us understand how each of the evaluated models performs for the sporadic or spiky events. For example, it identifies the key patterns in the target data that are well tracked by the foundational model vs. each of the stochastic models. We use the models with optimal parameters to estimate a year-long outage statistics of a particular root cause with less than 6% value errors.
+      <!--[2024]-->
+      <a name="VP"><p><li>K. S. Yim,<br><b>"Predicting Likely-Vulnerable Code Changes: Machine Learning-based Vulnerability Protections for Android Open Source Project,"</b><br>
+      <i>arXiv:2405.16655</i>,
+      2024.
+      <br><a href=https://arxiv.org/abs/2405.16655>pre-print</a>
+      <hr>
+      This paper presents a framework that selectively triggers security reviews for incoming source code changes. Functioning as a review bot within a code review service, the framework can automatically request additional security reviews at pre-submit time before the code changes are submitted to a source code repository. Because performing such secure code reviews add cost, the framework employs a classifier trained to identify code changes with a high likelihood of vulnerabilities. The online classifier leverages various types of input features to analyze the review patterns, track the software engineering process, and mine specific text patterns within given code changes. The classifier and its features are meticulously chosen and optimized using data from the submitted code changes and reported vulnerabilities in Android Open Source Project (AOSP). The evaluation results demonstrate that our Vulnerability Prevention (VP) framework identifies approximately 80% of the vulnerability-inducing code changes in the dataset with a precision ratio of around 98% and a false positive rate of around 1.7%. We discuss the implications of deploying the VP framework in multi-project settings and future directions for Android security research. This paper explores and validates our approach to code change-granularity vulnerability prediction, offering a preventive technique for software security by preemptively detecting vulnerable code changes before submission.
+      <br><a name="ToQB"><p><li>K. S. Yim,<br><b>"The Task-oriented Queries Benchmark (ToQB),"</b><br>
+      <i>arXiv:2406.02943</i>,
+      2024.
+      <br><a href=https://arxiv.org/abs/2406.02943>Paper</a> <a href=https://github.com/google/task-oriented-queries>GitHub</a>
+      <hr>
+      Task-oriented queries (e.g., one-shot queries to play videos, order food, or call a taxi) are crucial for assessing the quality of virtual assistants, chatbots, and other large language model (LLM)-based services. However, a standard benchmark for task-oriented queries is not yet available, as existing benchmarks in the relevant NLP (Natural Language Processing) fields have primarily focused on task-oriented dialogues. Thus, we present a new methodology for efficiently generating the Task-oriented Queries Benchmark (ToQB) using existing task-oriented dialogue datasets and an LLM service. Our methodology involves formulating the underlying NLP task to summarize the original intent of a speaker in each dialogue, detailing the key steps to perform the devised NLP task using an LLM service, and outlining a framework for automating a major part of the benchmark generation process. Through a case study encompassing three domains (i.e., two single-task domains and one multi-task domain), we demonstrate how to customize the LLM prompts (e.g., omitting system utterances or speaker labels) for those three domains and characterize the generated task-oriented queries. The generated ToQB dataset is made available to the public. We further discuss new domains that can be added to ToQB by community contributors and its practical applications.
+      <br><p><li>K. S. Yim<br><b>"Disparate sourcing of tree data structures for searching and suggesting application services,"</b><br><i>United States Patent</i>, No. 12,153,941, November 26, 2024 (filed on November 6, 2023).
+      <br><p><li>K. S. Yim and Z. Chen<br><b>"Launching determination based on login status,"</b><br><i>United States Patent</i>, No. 11,971,801, April 30, 2024 (filed on December 15, 2022).
+      <!--<br><p><li>K. S. Yim, I. Firman, A. M. Coimbra, R. J. Berry, M. Ionut-Andrecia, M. Reutov, G. O. Taubman, C. S. Kuang, M. Oh, S. R. Ganov, and K. R. Desineni,<br><b>"Human-in-the-Loop Voice Automation System,"</b><br><i>United States Patent</i>, Application No. 18/013,083, May 31, 2022, Publication No. 2023/0274737, August 31, 2023.-->
+      
+      <!--[2023]-->
+      <br><a name="BC2023"><p><li>K. S. Yim,<br><b>"Assessment of Security Defense of Native Programs Against Software Faults,"</b><br>
+      <i>System Dependability and Analytics</i>, Wang, L., Pattabiraman, K., Di Martino, C., Athreya, A., Bagchi, S. (eds), Springer Series in Reliability Engineering,
+      Springer, Cham., 2023.
+      <br><a href=https://doi.org/10.1007/978-3-031-02063-6_5>Springer Link</a> <a href=bibs.html#BC2023>.BIB</a>
+      <hr>
+      This chapter explores the possibility of building a unified assessment methodology for software reliability and security. The fault injection methodology originally designed for reliability assessment is extended to quantify and characterize the security defense aspect of native applications. Native application refers to system software written in C/C++ programming language. Specifically, software fault injection is used to measure the portion of injected software faults caught by the built-in error detection mechanisms of a target program (e.g., the detection coverage of assertions). To automatically activate as many injected faults as possible, a gray box fuzzing technique is used. Using dynamic analyzers during fuzzing further helps us catch the critical error propagation paths of injected (but undetected) faults, and identify code fragments as targets for security hardening. Because conducting software fault injection experiments for fuzzing is an expensive process, a novel, locality-based fault selection algorithm is presented. The presented algorithm increases the fuzzing failure ratios by 3–19 times, accelerating the speed of experiment. The case studies use all the above experimental techniques in order to compare the effectiveness of fuzzing and testing, and consequently assess the security defense of native benchmark programs.
+      <br><a name="entitypivoting"><p><li>K. S. Yim, K. Y. Lim, and U. Patil<br><b>"Recommending Action(s) Based on Entity or Entity Type,"</b><br><i>United States Patent</i>, No. 11,790,173, October 17, 2023 (filed on October 28, 2020).
+      <br><a name="appautomation"><p><li>K. S. Yim and I. Firman,<br><b>"Encoding/decoding user interface interactions,"</b><br><i>United States Patent</i>, No. 11,726,641, August 15, 2023 (filed on February 14, 2022).
+      <br><a name="autocompletefulfillment"><p><li>K. S. Yim,<br><b>"Fulfillment of actionable requests ahead of a user selecting a particular autocomplete suggestion for completing a current user input,"</b><br><i>United States Patent</i>, No. 11,556,707, January 17, 2023 (filed on June 18, 2020).
+      
+      <!--[2022]-->
+      <br><p><li>K. S. Yim, Z. Chen, and B. G. Lim,<br><b>"Selectively Rendering a Keyboard Interface in Response to an Assistant Invocation in Certain Circumstances,"</b><br><i>United States Patent</i>, No. 11,481,686, October 25, 2022 (filed on May 13, 2021).
+      <br><a name="P2022"><p><li>K. S. Yim,<br><b>"Open source software testing,"</b><br><i>United States Patent</i>, No. 11,216,357, January 4, 2022 (filed on February 22, 2018).
+      <br><p><li>K. S. Yim and I. Malchev,<br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i>United States Patent</i>, No. 11,354,464, June 7, 2022 (filed on June 26, 2020).
+      <br><a name="assistantprivacy"><p><li>K. S. Yim,<br><b>"Automated assistant architecture for preserving privacy of application content,"</b><br><i>United States Patent</i>, No. 11,374,887, June 28, 2022 (filed on October 29, 2019).
+      
+      <!--[2021]-->
+      <br><p><li>R. Shah, M. Ben-Ari, and K. S. Yim,<br><b>"Automated device test triaging system and techniques”,</b><br><i>United States Patent</i>, No. 11,113,183, September 7, 2021 (filed on November 10, 2017).
+      
+      <!--[2020]-->
+      <br><a name="AndroidVirtualDevice"><p><li>K. S. Yim and I. Malchev, <br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i> United States Patent</i>, No. 10,740,511, August 11, 2020 (Filed on April 25, 2019).
+      <br><p><li>I. B. Malchev and K. S. Yim, <br><b>"Operating system validation,”</b><br><i> United States Patent</i>, No. 10,754,765, August 25, 2020 (Filed on December 13, 2017).
+      
+        <!-[2019]-->
+      <br><a name="TECS2019"><p><li>K. S. Yim, I. Malchev, A. Hsieh, and D. Burke, <br><b>"Treble: Fast Software Updates by Creating an Equilibrium in an Active Software Ecosystem of Globally Distributed Stakeholders,”</b><br><i> ACM Transactions on Embedded Computing Systems (TECS)</i>, Vol. 18, Issue 5s, Article 104, 23 pages, October 2019. (SCIE, Impact Factor: 1.156)
+      <br><a href=https://dl.acm.org/doi/10.1145/3358237>ACM DL</a> <a href=bibs.html#TECS2019>.BIB</a>
+      <hr>
+      This paper presents our experience with Treble, a two-year initiative to build the modular base in Android, a Java-based mobile platform running on the Linux kernel. Our Treble architecture splits the hardware independent core framework written in Java from the hardware dependent vendor implementations (e.g., user space device drivers, vendor native libraries, and kernel written in C/C++). Cross-layer communications between them are done via versioned, stable inter-process communication interfaces whose backward compatibility is tested by using two API compliance suites. Based on this architecture, we repackage the key Android software components that suffered from crucial post-launch security bugs as separate images. That not only enables separate ownerships but also independent updates of each image by interested ecosystem entities. We discuss our experience of delivering Treble architectural changes to silicon vendors and device makers using a yearly release model. Our experiments and industry rollouts support our hypothesis that giving more freedom to all ecosystem entities and creating an equilibrium are a transformation necessary to further scale the world largest open source ecosystem with over two billion active devices.
+      
+      <br><p><li>K. S. Yim and I. Malchev, <br><b>"Multi-layer test suite generation,”</b><br><i> United States Patent</i>, No. 10,482,002, November 19, 2019 (Filed on September 20, 2018).
+      <br><p><li>K. S. Yim and I. Malchev, <br><b>"Selective simulation of virtualized hardware inputs,"</b><br><i> United States Patent</i>, No. 10,303,720, May 28, 2019 (Filed on August 17, 2016).
+      <br><a name="jitter"><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Filtering system noises in parallel computer system during thread synchronization,”</b><br><i> United States Patent</i>, No. 10,203,996, February 12, 2019 (Filed on December 16 2016).
+      
+        <!-[2018]-->
+      <br><p><li>K. S. Yim and I. Malchev, <br><b>"Middleware interface and middleware interface generator,"</b><br><i> United States Patent</i>, No. 10,019,298, July 10, 2018  (Filed on August 17, 2016).
+      
+        <!-[2017]-->
+      <br><a name="SOSP2017tutorial"><p><li>K. S. Yim, I. B. Malchev, and D. Burke, <br><b>“A Taste of Android Oreo (v8.0) Device Manufacturer,”</b><br><i> ACM Symposium on Operating Systems Principles (SOSP)</i>, Tutorial, 2017.
+      <br><a href=https://storage.googleapis.com/pub-tools-public-publication-data/pdf/5f1c2023353bae58231f9095bca2a1b6fee0bb63.pdf>Extended Abstract</a> <a href=https://docs.google.com/presentation/d/1iI4rOmUPkPJfAhPJpSsp5Mi2mqNbxlYzetW41y1hpYg/preview?slide=id.g25222c6d93_0_0>Slide</a> <a href=https://wp.nyu.edu/sosp2017tutorials/>Website</a>
+       <hr>In 2017, over two billion Android devices developed by more than a
+      thousand device manufacturers (DMs) around the world are actively
+      in use. Historically, silicon vendors (SVs), DMs, and telecom carriers
+      extended the Android Open Source Project (AOSP) platform source
+      code and used the customized code in final production devices. Forking, on the other hand, makes it hard to accept upstream patches
+      (e.g., security fixes). In order to reduce such software update costs,
+      starting from Android v8.0, the new Vendor Test Suite (VTS) splits
+      hardware-independent framework and hardware-dependent vendor implementation by using versioned, stable APIs (namely, vendor
+      interface). Android v8.0 thus opens the possibility of a fast upgrade
+      of the Android framework as long as the underlying vendor implementation passes VTS. This tutorial teaches how to develop, test,
+      and certify a compatible Android vendor interface implementation
+      running below the framework. We use an Android Virtual Device
+      (AVD) emulating an Android smartphone device to implement a
+      user-space device driver which uses formalized interfaces and RPCs,
+      develop VTS tests for that component, execute the extended tests,
+      and certify the extended vendor implementation.
+      
+          <br><a name="OnlineLecture2017"><p><li>K. S. Yim et al., <br><b>Android VTS and CTS-on-GSI video series, Android Open Source Project (AOSP)</b>, first released in 2017.
+      <br> <a href=https://source.android.com/compatibility/vts/codelab-video>Videos</a>
+      <br><p><li>K. S. Yim and P. Patnaik, <br><b>"Testing Application Software Using Virtual or Physical Devices,"</b><br><i> United States Patent</i>, No. 9,703,691, July 11, 2017 (Filed on June 15, 2015).
+      <br><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Monitoring system noises in parallel computer systems,”</b><br><i> United States Patent</i>, No. 9,558,095, January 31, 2017 (Filed on March 30, 2016).
+      
+        <!-[2016]-->
+      <br><a name="SRDS2016"><p><li>K. S. Yim, <br><b>"The Rowhammer Attack Injection Methodology,”</b><br>in <i>Proceedings of the IEEE Symposium Reliable Distributed Systems (SRDS)</i>, pp. 1-10, September 2016. (Acceptance Ratio: 32.5% = 27/83)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5dnNNOEpNWXEtSkU/view?resourcekey=0-_0wY5YqwZQo2eo74rylpyA>Paper</a> <a href=https://drive.google.com/file/d/1nGrG0ddAh_2KT0L-tZBxP8VBjYt5lsdR/view>Slide</a>
+      <hr>
+       This paper presents a systematic methodology to identify and validate security attacks that exploit user influenceable hardware faults (i.e., rowhammer errors). We break down rowhammer attack procedures into nine generalized steps where some steps are designed to increase the attack success probabilities. Our framework can perform those nine operations (e.g., pressuring system memory and spraying landing pages) as well as inject rowhammer errors which are basically modeled as ≥3-bit errors. When one of the injected errors is activated, such can cause control or data flow divergences which can then be caught by a prepared landing page and thus lead to a successful attack. Our experiments conducted against a guest operating system of a typical cloud hypervisor identified multiple reproducible targets for privilege escalation, shell injection, memory and disk corruption, and advanced denial-of-service attacks. Because the presented rowhammer attack injection (RAI) methodology uses error injection and thus statistical sampling, RAI can quantitatively evaluate the modeled rowhammer attack success probabilities of any given target software states.
+      
+      <br><a name="ISSRE2016"><p><li>K. S. Yim, <br><b>"Evaluation Metrics of Reliability Monitoring Rules of a Big Data Service,”</b><br>in <i>Proceedings of the IEEE International Symposium on Software Reliability Engineering (ISSRE)</i>, pp. 376-387, October 2016. (Acceptance Ratio: 35% = 45/130)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5c2pKZlhqV25wdFE/view?resourcekey=0-SNewyuRpqAqdJESbmYyXxg>Paper</a> <a href=https://drive.google.com/file/d/1nGrG0ddAh_2KT0L-tZBxP8VBjYt5lsdR/view>Slide</a>
+      <hr>
+       This paper presents new metrics to evaluate the reliability monitoring rules of a large-scale big data service. Our target service uses manually-tuned, service-level reliability monitoring rules. Using the measurement data, we identify two key technical challenges in operating our target monitoring system. In order to improve the operational efficiency, we characterize how those rules were manually tuned by the domain experts. The characterization results provide useful information to operators supposed to regularly tune such rules. Using the actual production failure data, we evaluate the same monitoring rules by using standard metrics and the presented metrics. Our evaluation results show the strengths and weaknesses of each metric and show that the presented metrics can further help operators recognize when and which rules need to be re-tuned.
+      <br><p><li>K. S. Yim, <br><b>"Fault tolerance model, methods, and apparatuses and their validation techniques,”</b><br><i> United States Patent</i>, No. 9,317,254, April 19, 2016 (Filed on December 4, 2013).
+      <br><p><li>K. S. Yim, S. R. Seelam, L. L. Fong, A. Iyengar, and J. Lewars, <br><b>"Filtering system noises in parallel computer systems during thread synchronization,”</b><br><i> United States Patent</i>, No. 9,361,202, June 7, 2016 (Filed on July 18, 2013).
+      <br><a name="mapreduce"><p><li>K. S. Yim, <br><b>"Methods and apparatuses for automated testing of streaming applications using MapReduce-like middleware,”</b><br><i> United States Patent</i>, No. 9,298,590, March 29, 2016 (Filed on June 26, 2014). *Typo in last name amended.
+      <br><p><li>S.-w. Lee, H.-c. Kim, Y.-s. Shin, M.-k. Jeong, K. S. Yim, J.-j. Yoo, J.-d. Lee, <br><b>"Method and apparatus for preventing stack overflow in embedded system,”</b><br><i> United States Patent</i>, No. 9,280,500, March 8, 2016 (Filed on January 3, 2008).
+      
+        <!-[2015]-->
+      <br><p><li>J. D. Lee, S.-w. Lee, J.-j. Yoo, Y.-s. Shin, M.-k. Jeong, and K. S. Yim, <br><b>"Method, medium and apparatus scheduling tasks in a real time operating system,”</b><br><i> United States Patent</i>, No. 9,009,714, April 14, 2015 (Filed on December 19, 2007).
+      
+        <!-[2014]-->
+      <br><a name="IPDPS2014"><p><li>K. S. Yim, <br><b>"Norming to Performing: Failure Analysis and Deployment Automation of Big Data Software Developed by Highly Iterative Models,”</b><br>in <i>Proceedings of the IEEE International Symposium on Software Reliability Engineering (ISSRE)</i>, pp. 144-155, December 2014. (Acceptance Ratio: 25% = 31/124)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5bzRpWUFudFNkTVE/view?resourcekey=0-6Tqujsc4c5JaAQisibKgxw>Paper</a> <a href=https://drive.google.com/file/d/11wsyxXm9PEBuXLVL7tFPUv5n0XsWq4hB/view>Slide</a>
+       <hr>
+       We observe many interesting failure characteristics from Big Data software developed and released using some kinds of highly iterative development models (e.g., agile). ~16% of failures occur due to faults in software deployments (e.g., packaging and pushing to production). Our analysis shows that many such production outages are at least partially due to some human errors rooted in the high frequency and complexity of software deployments. ~51% of the observed human errors (e.g., transcription, education, and communication error types) are avoidable through automation. We thus develop a fault-tolerant automation framework to make it efficient to automate end-to-end software deployment procedures. We apply the framework to two Big Data products. Our case studies show the complexity of the deployment procedures of multi-homed Big Data applications and help us to study the effectiveness of the validation and verification techniques for user-provided automation programs. We analyze the production failures of the two products again after the automation. Our experimental data shows how the automation and the associated procedure improvements reduce the deployment faults and overall failure rate, and improve the feature launch velocity. Automation facilitates more formal, procedure-driven software engineering practices which not only reduce the manual work and human-oriented, avoidable production outages but also help engineers to better understand overall software engineering procedures, making them more auditable, predictable, reliable, and efficient. We discuss two novel metrics to evaluate progress in mitigating human errors and the conditions indicating points to start such transition from owner-driven deployment practice.
+       <br><p><li>K. S. Yim, <br><b>"Characterization of Impact of Transient Faults and Detection of Data Corruption Errors in Large-Scale N-Body Programs Using Computational Accelerators,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 458-467, May 2014. (Acceptance Ratio: 21.1% = 114/541)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5a0R6UHJ5YjhGVEU/view?resourcekey=0-FfB-OGv13dbCC4rMOBvCwA>Paper</a> <a href=https://drive.google.com/file/d/1A0pba-tjyarRL9IqdMWEfHk-vEJEkT7w/view>Slide</a>
+      <hr>
+       In N-body programs, trajectories of simulated particles have chaotic patterns if errors are in the initial conditions or occur during some computation steps. It was believed that the global properties (e.g., total energy) of simulated particles are unlikely to be affected by a small number of such errors. In this paper, we present a quantitative analysis of the impact of transient faults in GPU devices on a global property of simulated particles. We experimentally show that a single-bit error in non-control data can change the final total energy of a large-scale N-body program with ~2.1% probability. We also find that the corrupted total energy values have certain biases (e.g., the values are not a normal distribution), which can be used to reduce the expected number of re-executions. In this paper, we also present a data error detection technique for N-body programs by utilizing two types of properties that hold in simulated physical models. The presented technique and an existing redundancy-based technique together cover many data errors (e.g., >97.5%) with a small performance overhead (e.g., 2.3%).
+      <br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 8,812,771, August 19, 2014 (Filed on February 12, 2010).
+      <br><p><li>K. S. Yim, <br><b>"Storage device including a file system manager for managing multiple storage media,”</b><br><i> United States Patent</i>, No. 8,892,520, November 18, 2014 (Filed on January 23, 2009).
+      <br><a name="rp1"><p><li>K. S. Yim, J.-j. Yoo, J.-w. Kim, S.-j. Ryu, J.-K. Park, J.-d. Lee, Y.-s. Shin, <br><b>"Multitasking method and apparatus for reconfigurable array,”</b><br><i> United States Patent</i>, No. 8,645,955, February 4, 2014 (Filed on June 12, 2007).
+      <br><p><li>J.-K. Park, K. S. Yim, W.-g. Kim, J.-j. Yoo, K.-h. Kang, C.-s. Im, J.-d. Lee, <br><b>"Method, medium and apparatus storing and restoring register context for fast context switching between tasks,”</b><br><i>United States Patent</i>, No. 8,635,627, January 21, 2014 (Filed on December 12, 2006).
+      
+      <!-[2013]-->
+      <br><p><li>K. S. Yim, <br><b>From Experiment To Design – Fault Characterization and Detection in Parallel Computer Systems Using Computational Accelerators</b>,<br><i>Ph.D. Dissertation</i>, <i>University of Illinois at Urbana-Champaign</i>, May 2013.
+       <br><a href=https://www.ideals.illinois.edu/handle/2142/44390>e-Library</a>
+      
+        <br><a name="IPDPS2013"><p><li>K. S. Yim, Z. Kalbarczyk, and R. K. Iyer, <br><b>"Pluggable Watchdog: Transparent Failure Detection for MPI Programs,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 489-500, May 2013. (Acceptance Ratio: 21.8% = 108/494)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5SEk3VDdhVTBTa1U/view?resourcekey=0-kev7yv9rEGZI5hrUuk0I-Q>Paper</a> <a href=https://drive.google.com/file/d/10_xdhazYxMgLH1Icg-Eq397EJhpPM4WE/view>Slide</a>
+       <hr>
+       This paper presents a framework and its techniques that can detect various types of runtime errors and failures in MPI programs. The presented framework offloads its detection techniques to an external device (e.g., extension card). By developing intelligence on the normal behavioral and semantic execution patterns of monitored parallel threads, the presented external error detectors can accurately and quickly detect errors and failures. This architecture allows us to use powerful detectors without directly using the computing power of the monitored system. The separation of hardware of the monitored and monitoring systems offers an extra advantage in terms of system reliability. We have prototyped our system on a parallel computer system by using an FPGA-based PCI extension card as a monitoring device. We have conducted a fault injection experiment to evaluate the presented techniques using eight MPI-based parallel programs. The techniques cover ~98.5% of faults, on average. The average performance overhead is 1.8% for techniques that detect crash and hang failures and 6.6% for techniques that detect SDC failures.
+      <br><p><li>K. S. Yim, J. C. Son, B. Y. Chung, <br><b>"Storage device reducing a memory management load and computing system using the storage device,”</b><br><i> United States Patent</i>, No. 8,443,144, May 14, 2013 (Filed on July 21, 2008).
+      <br><p><li>H.-c. Kim, K. S. Yim, S.-W. Lee, J.-j. Yoo, J.-d. Lee, Y.-s. Shin, <br><b>"Apparatus and method of detecting errors in embedded software,”</b><br><i> United States Patent</i>, No. 8,589,889, November 19, 2013 (Filed on November 13, 2007).
+      
+        <!-[2012]-->
+      <br><a name="Aerospace2012"><p><li>K. S. Yim, V. Sieda, Z. Kalbarczyk, D. Chen, and R. K. Iyer, <br><b>"A Fault-Tolerant Programmable Voter for Software-Based N-Modular Redundancy,”</b><br>in <i>Proceedings of the IEEE Aerospace Conference</i>, 20 pages, March 2012.
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5cUdTWEdsNzFpWWc/view?resourcekey=0-pluUi3xYbuxmEyz--h4ieA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5XzJYT3dIYmdsdm8/view?resourcekey=0-ZCkEqu9cqp95IGVejAaPUA>Slide</a>
+       <hr>
+       This paper presents a fault-tolerant, programmable voter architecture for software-implemented N-tuple modular redundant (NMR) computer systems. Software NMR is a cost-efficient solution for high-performance, mission-critical computer systems because this can be built on top of commercial off-the-shelf (COTS) devices. Due to the large volume and randomness of voting data, software NMR system requires a programmable voter. Our experiment shows that voting software that executes on a processor has the time-of-check-to-time-of-use (TOCTTOU) vulnerabilities and is unable to tolerate long duration faults. In order to address these two problems, we present a special-purpose voter processor and its embedded software architecture. The processor has a set of new instructions and hardware modules that are used by the software in order to accelerate the voting software execution and address the identified two reliability problems. We have implemented the presented system on an FPGA platform. Our evaluation result shows that using the presented system reduces the execution time of error detection codes (commonly used in voting software) by 14% and their code size by 56%. Our fault injection experiments validate that the presented system removes the TOCTTOU vulnerabilities and recovers under both transient and long duration faults. This is achieved by using 0.7% extra hardware in a baseline processor.
+      <br><p><li>K. S. Yim, C. H. Lee, <br><b>"Memory device and management method of memory device,”</b><br><i> United States Patent</i>, No. 8,321,624, November 27, 2012 (Filed on May 27, 2009).
+      <br><p><li>K. S. Yim, G. S. Choi, <br><b>"Storage management method and system using the same,”</b><br><i> United States Patent</i>, No. 8,171,239, May 1, 2012 (Filed on March 20, 2008).
+      <br><p><li>Y.-S. Shin, S.-w. Lee, H.-C. Kim, J.-j. Yoo, J.-d. Lee, M.-k. Jeong, and K. S. Yim,<br><b>"Transmitting and receiving method and apparatus in real-time system,”</b><br><i> United States Patent</i>, No. 8,194,658, June 5, 2012 (Filed on November 7, 2007).
+      <br><a name="kerneldebugger"><p><li>K. S. Yim, J.-k. Park, J.-j. Yoo, J.-d. Lee, C.-s. Im, Y.-S. Shin, <br><b>"Kernel-Aware Debugging System, Medium, and Method,"</b><br><i> United States Patent</i>, No. 8,239,838, August 7, 2012 (Filed on May 7, 2007); EU Patents, No. EP1870810A2, No. EP1870810A3.
+      <br><p><li>J. D. Lee, K. S. Yim, W. G. Kim, J. J. Yoo, J. K. Park, C.-W. Baek, C. S. Im, <br><b>"Method and System for Providing Context Switch using Multiple Register File,"</b><br><i> United States Patent</i>, No. 8,327,122, December 4, 2012 (Filed on March 2, 2007).
+      <br><p><li>K. S. Yim, J. J. Yoo, J. K. Park, C. S. Im, J. D. Lee, W. G. Kim, S. H. Choi, <br><b>"Method, System, and Medium for Providing Interprocessor Data Communication,”</b><br><i> United States Patent</i>, No. 8,127,110, February 28, 2012 (Filed on January 17, 2007).
+      
+      <!-[2011]-->
+      <br><a name="IPDPS2011"><p><li>K. S. Yim, C. Pham, M. Saleheen, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Hauberk: Lightweight Silent Data Corruption Error Detector for GPGPU,”</b><br>in <i>Proceedings of the IEEE International Parallel and Distributed Processing Symposium (IPDPS)</i>, pp. 287-300, May 2011. (Acceptance Rate: 19.6% = 112/571)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5S2ZZaWFkb04xYXc/view?resourcekey=0-XNszuc1_2uhvHRJKxZEEBA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5MERFcEROQXdJWmc/view?resourcekey=0-4deB4LXvuQL_NbWokR1mog>Slide</a>
+       <hr>
+       High performance and relatively low cost of GPU-based platforms provide an attractive alternative for general purpose high performance computing (HPC). However, the emerging HPC applications have usually stricter output correctness requirements than typical GPU applications (i.e., 3D graphics). This paper first analyzes the error resiliency of GPGPU platforms using a fault injection tool we have developed for commodity GPU devices. On average, 16-33% of injected faults cause silent data corruption (SDC) errors in the HPC programs executing on GPU. This SDC ratio is significantly higher than that measured in CPU programs (<2.3%). In order to tolerate SDC errors, customized error detectors are strategically placed in the source code of target GPU programs so as to minimize performance impact and error propagation and maximize recoverability. The presented HAUBERK technique is deployed in seven HPC benchmark programs and evaluated using a fault injection. The results show a high average error detection coverage (~87%) with a small performance overhead (~15%).
+      
+      <br><a name="LNCS2011"><p><li>K. S. Yim, D. Hreczany, and R. K. Iyer, <br><b>"A Hybrid Testing Automation Framework to Leverage Local and Global Computing Resources,”</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, 6784:479-494, June 2011. (Impact Factor: 0.97)
+       <br><a href=https://link.springer.com/chapter/10.1007/978-3-642-21931-3_37>LNCS</a>
+      <hr>
+       In web application development, testing forms an increasingly large portion of software engineering costs due to the growing complexity and short time-to-market of these applications. This paper presents a hybrid testing automation framework (HTAF) that can automate routine works in testing and releasing web software. Using this framework, an individual software engineer can easily describe his routine software engineering tasks and schedule these described tasks by using both his local machine and global cloud computers in an efficient way. This framework is applied to commercial web software development processes. Our industry practice shows four example cases where the hybrid and decentralized architecture of HTAF is helpful at effectively managing both hardware resources and manpower required for testing and releasing web applications.
+      <br><p><li>K. S. Yim, J.-j. Yoo, Y.-s. Shin, S.-w. Lee, H.-c. Kim, J.-d. Lee, M.-k. Jeong, <br><b>"Method of managing memory in multiprocessor system on chip,”</b><br><i> United States Patent</i>, No. 7,996,630, August 9, 2011 (Filed on August 11, 2010).
+      <br><p><li>J. D. Lee, S.-w. Lee, J.-j. Yoo, Y.-s. Shin, M.-k. Jeong, and K. S. Yim, <br><b>"Method, medium and apparatus managing memory,”</b><br><i> United States Patent</i>, No. 7,895,408, February 22, 2011 (Filed on December 20, 2007).
+      
+        <!-[2010]-->
+      <br><a name="DSN2010"><p><li>K. S. Yim, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Measurement-based Analysis of Fault and Error Sensitivities of Dynamic Memory,”</b><br>in <i>Proceedings of the IEEE International Conference on Dependable Systems and Networks (DSN)</i>, pp. 431-436, June 2010. (Practical Experience Report)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5U042dmwwX3drejQ/view?resourcekey=0-WLsiO7EF2f8ueJoqjVAc7g>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5OEdnamhOSDRsTkU/view?resourcekey=0-uLQE3J6rdPJnW71_YfACOQ>Slide</a>
+       <hr>
+       This paper presents a measurement-based analysis of the fault and error sensitivities of dynamic memory. We extend a software-implemented fault injector to support data-type-aware fault injection into dynamic memory. The results indicate that dynamic memory exhibits about 18 times higher fault sensitivity than static memory, mainly because of the higher activation rate. Furthermore, we show that errors in a large portion of static and dynamic memory space are recoverable by simple software techniques (e.g., reloading data from a disk). The recoverable data include pages filled with identical values (e.g., ‘0’) and pages loaded from files unmodified during the computation. Consequently, the selection of targets for protection should be based on knowledge of recoverability rather than on error sensitivity alone.
+      <br><p><li>K. S. Yim, J.-j. Yoo, Y.-s. Shin, S.-w. Lee, H.-c. Kim, J.-d. Lee, M.-k. Jeong, <br><b>"Method of managing memory in multiprocessor system on chip,”</b><br><i> United States Patent</i>, No. 7,805,582, Septemer 28, 2010 (Filed on September 13, 2007).
+      <br><a name="rp2"><p><li>K. S. Yim, J. W. Kim, S. J. Ryu, J. K. Park, J. J. Yoo, D.-H. Yoo, C. S. Im, J. D. Lee, H. S. Kim, <br><b>"Method, medium, and Apparatus with Interrupt Handling in a Reconfigurable Array,"</b><br><i> United States Patent</i>, No. 7,836,291, November 16, 2010 (Filed on October 17, 2006).
+      <br><p><li>K. S. Yim, J.-j. Yoo, J.-k. Park, <br><b>"Data storage system with complex memory and method of operating the same,”</b><br><i> United States Patent</i>, No. 7,689,761, March 30, 2010 (Filed on July 13, 2006).
+      <br><p><li>K. S. Yim, J. D. Lee, J.-J. Yoo, K.-h. Kang, J.-k. Park, C.-s. Im, W.-g. Kim, C.-w. Baek, <br><b>"Method for reducing code size of a program in code memory by dynamically storing an instruction into a memory location following a group of instructions indicated by an offset operand and either a length operand or a bitmask operand of an echo instruction,”</b><br><i> United States Patent</i>, No. 7,831,809, November 9, 2010 (Filed on August 28, 2006).
+      
+        <!-[2009]-->
+      <br><a name="PRDC2009"><p><li>K. S. Yim, Z. T. Kalbarczyk, and R. K. Iyer, <br><b>"Quantitative Analysis of Long Latency Failure in System Software,”</b><br>in <i>Proceedings of the IEEE Pacific Rim International Symposium on Dependable Computing (PRDC)</i>, pp. 23-30, November 2009.
+       <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5WlMwdzdlWFNBYlU/view?resourcekey=0-u-7AU1rcfEAtExkn4Xmlow>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5WXFPbEhjdzlwNEk/view?resourcekey=0-BjeVAT9X5WB7w0lXN7UtHg>Slide</a>
+       <hr>
+       This paper presents a study on long latency failures using accelerated fault injection. The data collected from the experiments are used to analyze the significance, causes, and characteristics of long latency failures caused by soft errors in the processor and the memory. The results indicate that a non-negligible portion of soft errors in the code and data memory lead to long latency failures. The long latency failures are caused by errors with long fault activation times and errors causing failures only under certain runtime conditions. On the other hand, less than 0.5% of soft errors in the processor registers used in kernel mode lead to a failure with latency longer than a thousand seconds. This is due to a strong temporal locality of the register values. The study shows also that the obtained insight can be used to guide design and placement (in the application code and/or system) of application-specific error detectors.
+      
+        <!-[2008]-->
+      <br><a name="OLS2008"><p><li>K. S. Yim and J. C. Son, <br><b>"SynergyFS: A Stackable File System Creating Synergies Between Heterogeneous Storage Devices,”</b><br>in <i>Proceedings of the Ottawa Linux Symposium (OLS)</i>, pp. 255-259, July 2008.
+      <br><a href=https://drive.google.com/file/u/3/d/0B6O4tPGQDZl5dDhEZUZpMERWYk0/view?usp=drive_open>Paper</a>
+      <hr>
+       Hybrid storage architecture is one efﬁcient method that can optimize the I/O performance, cost, and power consumption of storage systems. Thanks to the advances in semiconductor and optical storage technology, its application area is being expanded. It tries to store data to the most proper medium by considering I/O locality of the data. Data management between heterogeneous storage media is important, but it was manually done by system users.This paper presents an automatic management technique for a hybrid storage architecture. A novel software layer is deﬁned in the kernel between virtual and physical ﬁle systems. The proposed layer is a variant of stackable ﬁle systems, but is able to move ﬁles between heterogeneous physical ﬁle systems. For example, by utilizing the semantic information (e.g., ﬁle type and owner process), the proposed system optimizes the I/O performance without any manual control. Also as the proposed system concatenates the storage space of physical ﬁle systems, its space overhead is negligible. Speciﬁc characteristics of the proposed systems are analyzed through performance evaluation.
+      
+        <!-[2007]-->
+      
+        <!-[2006]-->
+      <br><a name="LNCS2006"><p><li>K. S. Yim, J. D. Lee, J. Park, C. Im, J.-J. Yoo, and Y. Ryu, <br><b>"A Software Reproduction of Virtual Memory for Deeply Embedded Systems,”</b><br><i>Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3980:1000-1009, May 2006. (SCIE, Impact Factor: 1.21)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ckFLdjV5ZGREWG8/view?resourcekey=0-MudjGBsn_zTu4sfER8fVcg>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ck16OWw3NXRqNnc/view?resourcekey=0-iGXPlo01RfxIiJLhevWhRw>Slide</a>
+       <hr>
+       Both the hardware cost and power consumption of computer systems heavily depend on the size of main memory, namely DRAM. This becomes important especially in tiny embedded systems (e.g., micro sensors) since they are produced in a large-scale and have to operate as long as possible, e.g., ten years. Although several methods have been developed to reduce the program code and data size, most of them need extra hardware devices, making them unsuitable for the tiny systems. For example, virtual memory system needs both MMU and TLB devices to execute large-size program on a small memory. This paper presents a software reproduction of the virtual memory system especially focusing on paging mechanism. In order to logically expand the physical memory space, the proposed method compacts, compresses, and swaps in/out heap memory blocks, which typically form over half of the whole memory size. A prototype implementation verifies that the proposed method can expand memory capacity by over twice. As a result, large size programs run in parallel with a reasonable overhead, comparable to that of hardware-based VM systems.
+      <br><a name="LNCS2006cata"><p><li>L.-z. Han, Y. Ryu, and K. S. Yim, <br><b>"CATA: A Garbage Collection Scheme for Flash Memory File Systems,"</b><br><i>Lecture Notes in Computer Science (LNCS)</i>, 4159:103-112, September 2006. (SCIE, Impact Factor: 1.21)
+      <br><a href=https://link.springer.com/chapter/10.1007/11833529_11>LNCS</a>
+      <br><a name="RTCSA2006"><p><li>K. S. Yim, J.-J. Yoo, J. D. Lee, and J. Kim, <br><b>"Operating System Support for Procedural Abstraction in Embedded Systems,”</b><br>in <i>Proceedings of the IEEE International Conference on Embedded and Real-Time Computing Systems and Applications (RTCSA)</i>, pp. 378-382, August 2006. (Acceptance Ratio: 32%)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5QzNsdUExT3N0QTg/view?resourcekey=0-bSt9MGOiRImzRzi8YMGZbA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5QkJiT0trMUlEenc/view?resourcekey=0-cURatc174a78An3EBiBl6w>Slide</a>
+       <hr>
+       Procedural abstraction reduces code size by replacing repeated code fragments with call instructions to a sub-routine that executes the repeated fragment. However, in order to build a subroutine, extra instructions are necessary to support the procedural call mechanism. In this paper, we present an operating system level technique which improves the space efficiency of a procedural abstraction-based code compaction technique. The call-related extra instructions are not used in the proposed technique because operating system routines implicitly supports the procedure call and return. The proposed technique consists of three execution modes including one applicable to ROM-based systems. The experimental results show the proposed technique reduces the code size significantly while increasing the execution time slightly.
+      
+      <!-[2005]-->
+      <br><a name="JSTS2005"><p><li>K. S. Yim, <br><b>"A Novel Memory Hierarchy for Flash Memory Based Storage Systems,”</b><br><i> Journal of Semiconductor Technology and Science (JSTS)</i>, ISSN 1598-1657, 5(4):69-76, December 2005. (Impact Factor: 0.13)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5SlJnbks1eVhWMEE/view?resourcekey=0-We_xUYYe-pDnILjnhagJtA>Paper</a>
+      <hr>Semiconductor scientists and engineers ideally desire the faster but the cheaper non-volatile memory devices. In practice, no single device satisfies this desire because a faster device is expensive and a cheaper is slow. Therefore, in this paper, we use heterogeneous non-volatile memories and construct an efficient hierarchy for them. First, a small RAM device (e.g., MRAM, FRAM, and PRAM) is used as a write buffer of flash memory devices. Since the buffer is faster and does not have an erase operation, write can be done quickly in the buffer, making the write latency short. Also, if a write is requested to a data stored in the buffer, the write is directly processed in the buffer, reducing one write operation to flash storages. Second, we use many types of flash memories (e.g., SLC and MLC flash memories) in order to reduce the overall storage cost. Specifically, write requests are classified into two types, hot and cold, where hot data is vulnerable to be modified in the near future. Only hot data is stored in the faster SLC flash, while the cold is kept in slower MLC flash or NOR flash. The evaluation results show that the proposed hierarchy is effective at improving the access time of flash memory storages in a cost-effective manner thanks to the locality in memory accesses.
+      
+      <br><a name="SAC2005"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"A Fast Start-Up Technique for Flash Memory Based Computing Systems,”</b><br>in <i>Proceedings of the ACM Symposium on Applied Computing (SAC)</i>, pp. 852-858, March 2005. (Acceptance Ratio: 36.39% = 278/764)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5OFRBUG9zcjVUazg/view?resourcekey=0-rYA6jeGT9zxDwPgK337-Dg>Paper</a>
+      <hr>Flash memory based embedded computing systems are becoming increasingly prevalent. These systems typically have to provide an instant start-up time. However, we observe that mounting a file system for flash memory takes 1 to 25 seconds mainly depending on the flash capacity. Since the flash chip capacity is doubled in every year, this mounting time will soon become the most dominant reason of the delay of system start-up time. Therefore, in this paper, we present instant mounting techniques for flash file systems by storing the in-memory file system metadata to flash memory when unmounting the file system and reloading the stored metadata quickly when mounting the file system. These metadata snapshot techniques are specifically developed for NOR- and NAND-type flash memories, while at the same time, overcoming their physical constraints. The proposed techniques check the validity of the stored snapshot and use the proposed fast crash recovery techniques when the snapshot is invalid. Based on the experimental results, the proposed techniques can reduce the flash mounting time by about two orders of magnitude over the existing de facto standard flash file system.
+      
+      <br><p><li>K. S. Yim, <br><b>"Studies on compressed memory architectures and decentralized communication systems for ubiquitous computing,”</b><br>Master’s Thesis, Seoul National U., February 2005.
+      
+      <!-[2004]-->
+      <br><a name="TCE2004"><p><li>K. S. Yim, H. Bahn, and K. Koh, <br><b>"A Flash Compression Layer for SmartMedia Card Systems,”</b><br><i> IEEE Transactions on Consumer Electronics (TCE)</i>, 50(1):192-197, February 2004. (Impact Factor: 0.73)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ZGZ3Nk53WS1DN28/view?resourcekey=0-zGs82yz-ePui8hb_bQnR-A>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5UUhIRFBQTExQT0k/view?resourcekey=0-ryZuwHF6OzAQ64hjL9C-yw>Slide</a>
+      <hr>Flash memory based SmartMedia Card is becoming increasingly popular as data storage for mobile consumer electronics. Since flash memory is an order of magnitude more expensive than magnetic disks, data compression can be effectively used in managing flash memory based storage systems. However, compressed data management in flash memory is challenging because it only supports page-based I/Os. For example, when the size of compressed data is smaller than the page size, internal fragmentation occurs and this degrades the effectiveness of compression seriously. In this paper, we developed a flash compression layer (FCL) for the SmartMedia Card systems. FCL stores several small compressed pages into one physical page by using a write buffer. Based on prototype implementation and simulation studies, we show that the proposed system offers the storage of flash memory more than 140% of its original size and expands the write bandwidth significantly.
+       
+      <br><a name="LNCS2004a"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"An Energy-Efficient Reliable Transport for Wireless Sensor Networks,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3090:54-64, February 2004. (SCIE, Impact Factor: 1.45)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5T29Cc056SnhQbm8/view?resourcekey=0-7N37bHjcwkw2-j6OMI6q9w>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5TG81OFh1eVFQYW8/view?resourcekey=0-9f9K4Ag3dLcju7z8CdhbXg>Slide</a>
+      <hr>In a wireless sensor network, sensor devices are connected by unreliable radio channels. Thus, the reliable packet delivery is an important design challenge. The existing sensor-to-base reliable transport mechanism, however, depends on a centralized manager node, incurring large control overheads of synchronizing reporting frequencies. In this paper, we present a decentralized reliable transport (DRT) with two novel decentralized reliability control schemes. First, we propose an independent reporting scheme where each sensor node stochastically makes reporting decisions. Second, we describe a cooperative reporting scheme where every sensor node implicitly cooperates with its neighbors for the uniform reporting. In the reporting step, DRT uses a reliable MAC channel, which is specifically optimized for reducing the energy dissipation. Experimental results show that DRT satisfies the desired delivery rate reliably in a decentralized manner while it significantly reduces the energy consumption of the radio device and the communication time.
+      
+      <br><a name="LNCS2004b"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"An Energy-Efficient Routing and Reporting Scheme to Exploit Data Similarities in Wireless Sensor Networks,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3207:515-527, August 2004. (SCIE, Impact Factor: 1.45)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5b1prS3g4amZSVzQ/view?resourcekey=0-T0L0GVzrvo5J2srE2GLlVA>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5RkdMWGZzMXo0ZGM/view?resourcekey=0-DKy4plle5cMv6JBC3B0_vQ>Slide</a>
+      <hr>Wireless sensor networks are based on a large number of tiny sensor nodes, which collect various types of physical data. These sensors are typically energy-limited and low-power operation is an important design constraint. In this paper, we propose a novel routing and reporting scheme based on sample data similarities commonly observed in sensed data. Based on reliable transport protocols, the proposed scheme takes advantage of the spatial and temporal similarities of the sensed data, reducing both the number of sensor nodes that are asked to report data and the frequency of those reports. Experimental results show that the proposed scheme can significantly reduce the communication energy consumption of a wireless sensor network while incurring only a small degradation in sensing accuracy.
+      
+      <br><a name="LNCS2004compression"><p><li>K. S. Yim, J.-S. Lee, J. Kim, S.-D. Kim, and K. Koh, <br><b>"A Space-Efficient On-Chip Compressed Cache Organization for High Performance Computing,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3358:952-964, December 2004. (SCIE, Impact Factor: 1.45)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5R2tsMVUzWE92ZXc/view?resourcekey=0-knKRKCbpJAUg1dU98kNsjg>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5T0VGdUlfVkFhY3c/view?resourcekey=0-8iQoHObEA4H4btaeo4mrIQ>Slide</a>
+      <hr>In order to alleviate the ever-increasing processor-memory performance gap of high-end parallel computers, on-chip compressed caches have been developed that can reduce the cache miss count and off-chip memory traffic by storing and transferring cache lines in a compressed form. However, we observed that their performance gain is often limited due to their use of the coarse-grained compressed cache line management which incurs internally fragmented space. In this paper, we present the fine-grained compressed cache line management which addresses the fragmentation problem, while avoiding an increase in the metadata size such as tag field and VM page table. Based on the SimpleScalar simulator with the SPEC benchmark suite, we show that over an existing compressed cache system the proposed cache organization can reduce the memory traffic by 15%, as it delivers compressed cache lines in a fine-grained way, and the cache miss count by 23%, as it stores up to three compressed cache lines in a physical cache line.
+      
+      <br><a name="LNCS2004nicnet"><p><li>K. S. Yim, H. Cha, and K. Koh, <br><b>"NIC-NET: A Host-Independent Network Solution for High-End Network Servers,"</b><br><i> Lecture Notes in Computer Science (LNCS)</i>, Springer-Verlag, 3320:401-405, December 2004. (SCIE, Impact Factor: 1.45)
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5XzFxNDI2UWhhMjQ/view?resourcekey=0-4uED7N2VodTnGj6RYNQE4Q>Paper</a> <a href=https://drive.google.com/file/d/0B6O4tPGQDZl5Zzd1LTNEMnNKLVk/view?resourcekey=0-G6d5MR9_bTQsPIesSwyebA>Slide</a>
+      <hr>This paper discusses a host-independent network system where a network interface card is utilized in an efficient way. By eliminating protocol stack processing overheads from host system, the proposed system improves the communication speed by 11-36% under heavy network and CPU loads.
+      <br><p><li>K. S. Yim, S. Lee, and K. Koh, <br><b>"An Energy-Efficient Compression Algorithm for Wireless Communication,"</b><br>in <i>Proceedings of the International SoC Design Conference (ISOCC)</i>, pp. 578-581, November 2004.
+      
+        <!-[2003]-->
+      <br><a name="PDPTA2003"><p><li>K. S. Yim, J. Kim, and K. Koh, <br><b>"Performance Analysis of On-Chip Cache and Main Memory Compression Systems for High-End Parallel Computers,"</b><br>in <i>Proceedings of the International Conference on Parallel and Distributed Processing Techniques and Applications (PDPTA)</i>, pp. 469-475, June 2003.
+      <br><a href=https://drive.google.com/file/d/0B6O4tPGQDZl5ZDROUXhfUmszRkk/view?resourcekey=0-wl782tBmGNHfaHV_uE8vqw>Paper</a>
+      <hr>Cache and memory compression systems have been developed for improving memory system performance of high-performance parallel computers. Cache compression systems can reduce on-chip cache miss rate and off-chip memory traffic by storing and transferring cache lines in compressed form, while memory compression systems can expand main memory capacity by storing memory pages in compressed form. However, these systems have not been quantitatively evaluated on an identical condition, making it difficult to understand the performance of a new system relative to the existing systems. In this paper, we provide an identical execution-driven simulation environment for these systems. To the best of our knowledge, none has been evaluated the performance of cache and memory compression systems by using an execution-driven simulator. Experimental results show that cache compression systems reduce cache miss rate by 16% and memory traffic by 30%, while it expands memory capacity by less than 160%. The results also show that memory compression systems significantly expand memory capacity by over 270%. Based on these experimental analyses, we finally provide future research directions on the compression systems.
+       
+      <!-[2002]-->
+      <br><p><li>K. S. Yim, <br><b>"Utilizing Network Interface Card for Host-Independent Network Systems,”</b><br>in <i>Proceedings of Samsung Human-tech Thesis Prize (Undergrad Division)</i>, February 2002.
+      
+      <!-[2001]-->
+      <br><p><li>K. S. Yim, <br><b>"The Perfect Analysis of Linux Kernel for Implementing General-Purpose Operating System,"</b><br> distributed to the open source communities, August 2001.
+      <br><p><li>K. S. Yim, <br><b>"Design and Implementation of a General-Purpose Remote Control System,"</b><br>in <i>Proceedings of the Samsung Human-tech Thesis Prize (Undergrad Division)</i>, February 2001.
+    </ol>
+    <p><hr>
+    Return to the <a href=#topmenu>top</a>.<br>
+  </body>
 </html>
